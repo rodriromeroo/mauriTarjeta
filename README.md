@@ -1,4 +1,6 @@
-[![codecov](https://codecov.io/gh/mgonzalesips/TrabajoTarjeta2025/graph/badge.svg?token=XI7V37W69W)](https://codecov.io/gh/mgonzalesips/TrabajoTarjeta2025)
+Por comodidad, dejaremos el readme así y añadiremos acá como se llevan a paso las iteraciones!! 
+Iteraciones hechas: 1 (total)
+Restantes: 2, 3, 4 (totales)
 
 # Trabajo Tarjeta 2025
 
