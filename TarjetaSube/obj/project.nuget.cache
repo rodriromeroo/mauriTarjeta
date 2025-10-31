@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "csIry7SJe3Y=",
+  "dgSpecHash": "sVaPFZTwEdI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rarom\\Downloads\\TrabajoTarjeta2025\\TarjetaSube\\TarjetaSube.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\descargas lol\\tp mauri sube\\mauriTarjeta\\TarjetaSube\\TarjetaSube.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pili\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Pili\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Pili\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Pili\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -5085,39 +5085,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rarom\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Pili\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rarom\\Downloads\\TrabajoTarjeta2025\\TarjetaSubeTest\\TarjetaSubeTest.csproj",
+      "projectUniqueName": "D:\\descargas lol\\tp mauri sube\\mauriTarjeta\\TarjetaSubeTest\\TarjetaSubeTest.csproj",
       "projectName": "TarjetaSubeTest",
-      "projectPath": "C:\\Users\\rarom\\Downloads\\TrabajoTarjeta2025\\TarjetaSubeTest\\TarjetaSubeTest.csproj",
-      "packagesPath": "C:\\Users\\rarom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rarom\\Downloads\\TrabajoTarjeta2025\\TarjetaSubeTest\\obj\\",
+      "projectPath": "D:\\descargas lol\\tp mauri sube\\mauriTarjeta\\TarjetaSubeTest\\TarjetaSubeTest.csproj",
+      "packagesPath": "C:\\Users\\Pili\\.nuget\\packages\\",
+      "outputPath": "D:\\descargas lol\\tp mauri sube\\mauriTarjeta\\TarjetaSubeTest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\rarom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Pili\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\rarom\\Downloads\\TrabajoTarjeta2025\\TarjetaSube\\TarjetaSube.csproj": {
-              "projectPath": "C:\\Users\\rarom\\Downloads\\TrabajoTarjeta2025\\TarjetaSube\\TarjetaSube.csproj"
+            "D:\\descargas lol\\tp mauri sube\\mauriTarjeta\\TarjetaSube\\TarjetaSube.csproj": {
+              "projectPath": "D:\\descargas lol\\tp mauri sube\\mauriTarjeta\\TarjetaSube\\TarjetaSube.csproj"
             }
           }
         }
@@ -5131,8 +5124,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net5.0": {
@@ -5166,12 +5158,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411\\RuntimeIdentifierGraph.json"
       }
     }
   }

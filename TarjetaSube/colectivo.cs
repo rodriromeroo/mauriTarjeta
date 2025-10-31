@@ -17,7 +17,29 @@ namespace TarjetaSube {
         }
 
         public bool PagarCon(Tarjeta tarjeta) {
-            bool pagoExitoso = tarjeta.DescontarSaldo(valorPasaje);
+            decimal montoACobrar = valorPasaje;
+            
+            if (tarjeta is TarjetaFranquiciaCompleta) {
+                TarjetaFranquiciaCompleta franquicia = (TarjetaFranquiciaCompleta)tarjeta;
+                return franquicia.SiemprePuedePagar();
+            }
+            
+            if (tarjeta is TarjetaMedioBoleto) {
+                TarjetaMedioBoleto medioBoleto = (TarjetaMedioBoleto)tarjeta;
+                montoACobrar = medioBoleto.CalcularDescuento(valorPasaje);
+            }
+            if (tarjeta is TarjetaMedioBoleto) {
+                TarjetaMedioBoleto medioBoleto = (TarjetaMedioBoleto)tarjeta;
+                montoACobrar = medioBoleto.CalcularDescuento(valorPasaje);
+            }
+
+            if (tarjeta is TarjetaFranquiciaCompleta) {
+                TarjetaFranquiciaCompleta gratuito = (TarjetaFranquiciaCompleta)tarjeta;
+                montoACobrar = gratuito.CalcularDescuento(valorPasaje);
+                return true;
+            }
+            
+            bool pagoExitoso = tarjeta.DescontarSaldo(montoACobrar);
             return pagoExitoso;
         }
     }
