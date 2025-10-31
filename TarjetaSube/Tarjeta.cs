@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TarjetaSube
-{
-    public class Tarjeta
-    {
+namespace TarjetaSube {
+    public class Tarjeta {
         private decimal saldo;
         private List<decimal> montosPermitidos;
-
-        public Tarjeta()
-        {
+        
+        public Tarjeta() {
             saldo = 0;
             montosPermitidos = new List<decimal>();
             montosPermitidos.Add(2000);
@@ -24,21 +21,17 @@ namespace TarjetaSube
             montosPermitidos.Add(30000);
         }
 
-        public decimal ObtenerSaldo()
-        {
+        public decimal ObtenerSaldo() {
             return saldo;
         }
 
-        public bool CargarSaldo(decimal monto)
-        {
-            if (!montosPermitidos.Contains(monto))
-            {
+        public bool CargarSaldo(decimal monto) {
+            if (!montosPermitidos.Contains(monto)) {
                 return false;
             }
 
             decimal nuevoSaldo = saldo + monto;
-            if (nuevoSaldo > 40000)
-            {
+            if (nuevoSaldo > 40000) {
                 return false;
             }
 
@@ -46,10 +39,8 @@ namespace TarjetaSube
             return true;
         }
 
-        public bool DescontarSaldo(decimal monto)
-        {
-            if (saldo < monto)
-            {
+        public bool DescontarSaldo(decimal monto) {
+            if (saldo < monto) {
                 return false;
             }
 
