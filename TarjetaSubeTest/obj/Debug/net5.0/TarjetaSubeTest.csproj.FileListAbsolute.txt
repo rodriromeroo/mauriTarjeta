@@ -215,3 +215,13 @@ C:\Users\rarom\Downloads\TrabajoTarjeta2025\TarjetaSubeTest\obj\Debug\net5.0\ref
 C:\Users\rarom\Downloads\TrabajoTarjeta2025\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.pdb
 C:\Users\rarom\Downloads\TrabajoTarjeta2025\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.genruntimeconfig.cache
 C:\Users\rarom\Downloads\TrabajoTarjeta2025\TarjetaSubeTest\obj\Debug\net5.0\ref\TarjetaSubeTest.dll
+D:\descargas lol\tp mauri sube\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\CoverletSourceRootsMapping
+D:\descargas lol\tp mauri sube\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.csproj.AssemblyReference.cache
+D:\descargas lol\tp mauri sube\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\descargas lol\tp mauri sube\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.AssemblyInfoInputs.cache
+D:\descargas lol\tp mauri sube\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.AssemblyInfo.cs
+D:\descargas lol\tp mauri sube\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.csproj.CoreCompileInputs.cache
+D:\descargas lol\tp mauri sube\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.sourcelink.json
+D:\descargas lol\tp mauri sube\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.dll
+D:\descargas lol\tp mauri sube\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\refint\TarjetaSubeTest.dll
+D:\descargas lol\tp mauri sube\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.pdb
