@@ -5,17 +5,12 @@ namespace TarjetaSube {
     public class Tarjeta {
         private decimal saldo;
         private List<decimal> montosPermitidos;
-<<<<<<< HEAD
-        
-        public Tarjeta() {
-=======
 
         // limite negativo de -1200
         private const decimal LIMITE_NEGATIVO = -1200m;
 
         public Tarjeta()
         {
->>>>>>> 3294baa320cb1fcc299e87b589c3caa8558f31d3
             saldo = 0;
             montosPermitidos = new List<decimal>
             {
@@ -27,17 +22,11 @@ namespace TarjetaSube {
             return saldo;
         }
 
-<<<<<<< HEAD
-        public bool CargarSaldo(decimal monto) {
-            if (!montosPermitidos.Contains(monto)) {
-=======
         /// carga saldo monto permitido y carga max de 40k, si el saldo es negativo se paga la deuda
-       
         public bool CargarSaldo(decimal monto)
         {
             if (!montosPermitidos.Contains(monto))
             {
->>>>>>> 3294baa320cb1fcc299e87b589c3caa8558f31d3
                 return false;
             }
 
@@ -50,10 +39,6 @@ namespace TarjetaSube {
             return true;
         }
 
-<<<<<<< HEAD
-        public bool DescontarSaldo(decimal monto) {
-            if (saldo < monto) {
-=======
         /// descuenta saldo y no deja pasar de -1200
         public bool DescontarSaldo(decimal monto)
         {
@@ -61,7 +46,6 @@ namespace TarjetaSube {
 
             if (saldoResultado < LIMITE_NEGATIVO)
             {
->>>>>>> 3294baa320cb1fcc299e87b589c3caa8558f31d3
                 return false;
             }
 
