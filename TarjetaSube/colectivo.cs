@@ -16,31 +16,38 @@ namespace TarjetaSube {
             return numeroLinea;
         }
 
-        public bool PagarCon(Tarjeta tarjeta) {
+        public Boleto PagarCon(Tarjeta tarjeta) {
             decimal montoACobrar = valorPasaje;
             
+            // Si es franquicia completa, siempre puede pagar
             if (tarjeta is TarjetaFranquiciaCompleta) {
                 TarjetaFranquiciaCompleta franquicia = (TarjetaFranquiciaCompleta)tarjeta;
-                return franquicia.SiemprePuedePagar();
+                montoACobrar = franquicia.CalcularDescuento(valorPasaje);
+                Boleto boletito = new Boleto(numeroLinea, montoACobrar, tarjeta.ObtenerSaldo());
+                return boletito;
             }
             
+            // Si es medio boleto, cobra la mitad
             if (tarjeta is TarjetaMedioBoleto) {
                 TarjetaMedioBoleto medioBoleto = (TarjetaMedioBoleto)tarjeta;
                 montoACobrar = medioBoleto.CalcularDescuento(valorPasaje);
             }
-            if (tarjeta is TarjetaMedioBoleto) {
-                TarjetaMedioBoleto medioBoleto = (TarjetaMedioBoleto)tarjeta;
-                montoACobrar = medioBoleto.CalcularDescuento(valorPasaje);
-            }
-
-            if (tarjeta is TarjetaFranquiciaCompleta) {
-                TarjetaFranquiciaCompleta gratuito = (TarjetaFranquiciaCompleta)tarjeta;
+            
+            // Si es boleto gratuito, no cobra nada
+            if (tarjeta is TarjetaBoletoGratuito) {
+                TarjetaBoletoGratuito gratuito = (TarjetaBoletoGratuito)tarjeta;
                 montoACobrar = gratuito.CalcularDescuento(valorPasaje);
-                return true;
             }
             
+            // Intenta descontar el saldo
             bool pagoExitoso = tarjeta.DescontarSaldo(montoACobrar);
-            return pagoExitoso;
+            
+            if (pagoExitoso) {
+                Boleto boleto = new Boleto(numeroLinea, montoACobrar, tarjeta.ObtenerSaldo());
+                return boleto;
+            } else {
+                return null;
+            }
         }
     }
 }

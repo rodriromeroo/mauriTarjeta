@@ -14,8 +14,8 @@ namespace TarjetaSube {
             Colectivo cole = new Colectivo("102 144");
             
             Console.WriteLine("\nPagando viaje.");
-            bool pagoExitoso = cole.PagarCon(miTarjeta);
-            if (pagoExitoso) {
+            Boleto boleto1 = cole.PagarCon(miTarjeta);
+            if (boleto1 != null) {
                 Console.WriteLine("Pago exitoso!");
                 Console.WriteLine("Saldo restante: $" + miTarjeta.ObtenerSaldo());
             } else {
@@ -31,8 +31,8 @@ namespace TarjetaSube {
             Console.WriteLine("Saldo actual: $" + miTarjeta.ObtenerSaldo());
             
             Console.WriteLine("\nIntentando pagar otro viaje");
-            bool pagoExitoso2 = cole.PagarCon(miTarjeta);
-            if (pagoExitoso2) {
+            Boleto boleto2 = cole.PagarCon(miTarjeta);
+            if (boleto2 != null) {
                 Console.WriteLine("Pago exitoso!");
                 Console.WriteLine("Saldo restante: $" + miTarjeta.ObtenerSaldo());
             } else {
@@ -41,8 +41,8 @@ namespace TarjetaSube {
             
             Console.WriteLine("\nIntentando pagar sin saldo suficiente");
             Tarjeta tarjetaVacia = new Tarjeta();
-            bool pagoFallido = cole.PagarCon(tarjetaVacia);
-            if (pagoFallido) {
+            Boleto boletoFallido = cole.PagarCon(tarjetaVacia);
+            if (boletoFallido != null) {
                 Console.WriteLine("Pago exitoso!");
             } else {
                 Console.WriteLine("Pago rechazado - Saldo insuficiente.");
