@@ -167,5 +167,57 @@ namespace TarjetaSube.Tests
             tarjeta.CargarSaldo(5000);
             Assert.AreEqual(3840, tarjeta.ObtenerSaldo());
         }
+
+        [Test]
+        public void CargarSaldo_TodosLosMontos_Funcionan()
+        {
+            Assert.IsTrue(tarjeta.CargarSaldo(2000));
+            tarjeta = new Tarjeta();
+            Assert.IsTrue(tarjeta.CargarSaldo(3000));
+            tarjeta = new Tarjeta();
+            Assert.IsTrue(tarjeta.CargarSaldo(4000));
+            tarjeta = new Tarjeta();
+            Assert.IsTrue(tarjeta.CargarSaldo(5000));
+            tarjeta = new Tarjeta();
+            Assert.IsTrue(tarjeta.CargarSaldo(8000));
+            tarjeta = new Tarjeta();
+            Assert.IsTrue(tarjeta.CargarSaldo(10000));
+            tarjeta = new Tarjeta();
+            Assert.IsTrue(tarjeta.CargarSaldo(15000));
+            tarjeta = new Tarjeta();
+            Assert.IsTrue(tarjeta.CargarSaldo(20000));
+            tarjeta = new Tarjeta();
+            Assert.IsTrue(tarjeta.CargarSaldo(25000));
+            tarjeta = new Tarjeta();
+            Assert.IsTrue(tarjeta.CargarSaldo(30000));
+        }
+
+        [Test]
+        public void DescontarSaldo_EnLimiteExacto_Funciona()
+        {
+            bool resultado = tarjeta.DescontarSaldo(1200);
+            Assert.IsTrue(resultado);
+            Assert.AreEqual(-1200, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void DescontarSaldo_UnPesoMasDelLimite_RetornaFalse()
+        {
+            bool resultado = tarjeta.DescontarSaldo(1201);
+            Assert.IsFalse(resultado);
+            Assert.AreEqual(0, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void CargarSaldo_DespuesDeLimiteNegativo_Recupera()
+        {
+            tarjeta.DescontarSaldo(1200);
+            tarjeta.CargarSaldo(5000);
+            Assert.AreEqual(3800, tarjeta.ObtenerSaldo());
+
+            bool puedeCargarMas = tarjeta.CargarSaldo(10000);
+            Assert.IsTrue(puedeCargarMas);
+            Assert.AreEqual(13800, tarjeta.ObtenerSaldo());
+        }
     }
 }

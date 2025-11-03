@@ -344,7 +344,6 @@ C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Deb
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\ref\TarjetaSubeTest.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.pdb
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
-C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\Microsoft.DotNet.InternalAbstractions.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\Microsoft.TestPlatform.CommunicationUtilities.dll
@@ -354,7 +353,6 @@ C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Deb
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\NuGet.Frameworks.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\nunit.framework.dll
-C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\System.Xml.XPath.XmlDocument.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
@@ -432,3 +430,4 @@ C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\obj\Deb
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\ref\TarjetaSubeTest.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.pdb
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\obj\Debug\net5.0\TarjetaSubeTest.genruntimeconfig.cache
+C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\testcentric.engine.metadata.dll
