@@ -32,6 +32,6 @@ jobs:
       uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        files: ./**/TestResults/**/*.xml
+        files: '**/TestResults/**/*.xml'
         fail_ci_if_error: true
 
