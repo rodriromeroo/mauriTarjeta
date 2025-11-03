@@ -28,10 +28,12 @@ jobs:
     - name: Run tests with coverage
       run: dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage" --logger "trx"
 
+    - name: List coverage files
+      run: |
+        Get-ChildItem -Recurse -Filter "coverage.cobertura.xml"
+
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        files: ./**/coverage.cobertura.xml
-        fail_ci_if_error: true
-
+        file: ./TarjetaSubeTest/TestResults/*/coverage.cobertura.xml
