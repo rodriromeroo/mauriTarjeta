@@ -219,5 +219,22 @@ namespace TarjetaSube.Tests
             Assert.IsTrue(puedeCargarMas);
             Assert.AreEqual(13800, tarjeta.ObtenerSaldo());
         }
+
+        [Test]
+        public void Tarjeta_TieneIDUnico()
+        {
+            Tarjeta t1 = new Tarjeta();
+            Tarjeta t2 = new Tarjeta();
+
+            Assert.IsNotNull(t1.ID);
+            Assert.IsNotNull(t2.ID);
+            Assert.AreNotEqual(t1.ID, t2.ID);
+        }
+
+        [Test]
+        public void ObtenerTipo_TarjetaNormal_DevuelveNormal()
+        {
+            Assert.AreEqual("Normal", tarjeta.ObtenerTipo());
+        }
     }
 }

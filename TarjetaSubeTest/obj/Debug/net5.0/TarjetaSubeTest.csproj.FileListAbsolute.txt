@@ -332,10 +332,6 @@ C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Deb
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\nunit.engine.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\nunit.engine.api.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\nunit.engine.core.dll
-C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSube.deps.json
-C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSube.runtimeconfig.json
-C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSube.runtimeconfig.dev.json
-C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSube.exe
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.deps.json
 C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.runtimeconfig.json

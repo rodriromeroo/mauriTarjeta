@@ -8,10 +8,12 @@ namespace TarjetaSube
         protected decimal saldo;
         private List<decimal> montosPermitidos;
         private const decimal LIMITE_NEGATIVO = -1200m;
+        public string ID { get; private set; }
 
         public Tarjeta()
         {
             saldo = 0;
+            ID = Guid.NewGuid().ToString();
             montosPermitidos = new List<decimal> {
                 2000, 3000, 4000, 5000, 8000, 10000, 15000, 20000, 25000, 30000
             };
@@ -20,6 +22,11 @@ namespace TarjetaSube
         public decimal ObtenerSaldo()
         {
             return saldo;
+        }
+
+        public virtual string ObtenerTipo()
+        {
+            return "Normal";
         }
 
         public bool CargarSaldo(decimal monto)

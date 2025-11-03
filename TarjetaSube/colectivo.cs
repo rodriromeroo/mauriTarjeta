@@ -1,51 +1,81 @@
 ﻿using System;
 
-namespace TarjetaSube {
-
-    public class Colectivo {
-
+namespace TarjetaSube
+{
+    public class Colectivo
+    {
         private string numeroLinea;
         private decimal valorPasaje;
 
-        public Colectivo(string linea) {
+        public Colectivo(string linea)
+        {
             numeroLinea = linea;
             valorPasaje = 1580;
         }
 
-        public string ObtenerLinea() {
+        public string ObtenerLinea()
+        {
             return numeroLinea;
         }
 
-        public Boleto PagarCon(Tarjeta tarjeta) {
+        public Boleto PagarCon(Tarjeta tarjeta)
+        {
+            return PagarCon(tarjeta, DateTime.Now);
+        }
+
+        public Boleto PagarCon(Tarjeta tarjeta, DateTime tiempo)
+        {
             decimal montoACobrar = valorPasaje;
-            
-            // Si es franquicia completa, siempre puede pagar
-            if (tarjeta is TarjetaFranquiciaCompleta) {
+            decimal saldoAnterior = tarjeta.ObtenerSaldo();
+
+            if (tarjeta is TarjetaFranquiciaCompleta)
+            {
                 TarjetaFranquiciaCompleta franquicia = (TarjetaFranquiciaCompleta)tarjeta;
                 montoACobrar = franquicia.CalcularDescuento(valorPasaje);
-                Boleto boletito = new Boleto(numeroLinea, montoACobrar, tarjeta.ObtenerSaldo());
+                decimal totalAbonado = montoACobrar;
+                Boleto boletito = new Boleto(numeroLinea, montoACobrar, tarjeta.ObtenerSaldo(), tarjeta.ObtenerTipo(), tarjeta.ID, totalAbonado);
                 return boletito;
             }
-            
-            // Si es medio boleto, cobra la mitad
-            if (tarjeta is TarjetaMedioBoleto) {
+
+            if (tarjeta is TarjetaMedioBoleto)
+            {
                 TarjetaMedioBoleto medioBoleto = (TarjetaMedioBoleto)tarjeta;
-                montoACobrar = medioBoleto.CalcularDescuento(valorPasaje);
+
+                if (!medioBoleto.PuedeViajar(tiempo))
+                {
+                    return null;
+                }
+
+                montoACobrar = medioBoleto.CalcularDescuento(valorPasaje, tiempo);
             }
-            
-            // Si es boleto gratuito, no cobra nada
-            if (tarjeta is TarjetaBoletoGratuito) {
+
+            if (tarjeta is TarjetaBoletoGratuito)
+            {
                 TarjetaBoletoGratuito gratuito = (TarjetaBoletoGratuito)tarjeta;
                 montoACobrar = gratuito.CalcularDescuento(valorPasaje);
             }
-            
-            // Intenta descontar el saldo
+
             bool pagoExitoso = tarjeta.DescontarSaldo(montoACobrar);
-            
-            if (pagoExitoso) {
-                Boleto boleto = new Boleto(numeroLinea, montoACobrar, tarjeta.ObtenerSaldo());
+
+            if (pagoExitoso)
+            {
+                if (tarjeta is TarjetaMedioBoleto)
+                {
+                    ((TarjetaMedioBoleto)tarjeta).RegistrarViaje(tiempo);
+                }
+
+                decimal totalAbonado = montoACobrar;
+                if (saldoAnterior < 0)
+                {
+                    decimal deudaAnterior = Math.Abs(saldoAnterior);
+                    totalAbonado = montoACobrar;
+                }
+
+                Boleto boleto = new Boleto(numeroLinea, montoACobrar, tarjeta.ObtenerSaldo(), tarjeta.ObtenerTipo(), tarjeta.ID, totalAbonado);
                 return boleto;
-            } else {
+            }
+            else
+            {
                 return null;
             }
         }
