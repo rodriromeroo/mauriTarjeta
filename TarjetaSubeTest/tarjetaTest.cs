@@ -98,15 +98,6 @@ namespace TarjetaSube.Tests
         }
 
         [Test]
-        public void DescontarSaldo_SinSaldoSuficiente_RetornaFalse()
-        {
-            tarjeta.CargarSaldo(1000);
-            bool resultado = tarjeta.DescontarSaldo(1580);
-            Assert.IsFalse(resultado);
-            Assert.AreEqual(0, tarjeta.ObtenerSaldo());
-        }
-
-        [Test]
         public void DescontarSaldo_MontoExacto_DejaEnCero()
         {
             tarjeta.CargarSaldo(2000);
@@ -123,6 +114,58 @@ namespace TarjetaSube.Tests
             tarjeta.DescontarSaldo(1580);
             tarjeta.DescontarSaldo(1580);
             Assert.AreEqual(5260, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void DescontarSaldo_NoPermiteMenosDeMenos1200_RetornaFalse()
+        {
+            bool resultado = tarjeta.DescontarSaldo(1300);
+            Assert.IsFalse(resultado);
+            Assert.AreEqual(0, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void DescontarSaldo_PermiteHastaMenos1200_RetornaTrue()
+        {
+            bool resultado = tarjeta.DescontarSaldo(1200);
+            Assert.IsTrue(resultado);
+            Assert.AreEqual(-1200, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void DescontarSaldo_PuedeUsarSaldoNegativo()
+        {
+            tarjeta.CargarSaldo(2000);
+            tarjeta.DescontarSaldo(2500);
+            Assert.AreEqual(-500, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void CargarSaldo_ConSaldoNegativo_DescuentaDeuda()
+        {
+            tarjeta.DescontarSaldo(1000);
+            tarjeta.CargarSaldo(3000);
+            Assert.AreEqual(2000, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void CargarSaldo_ConSaldoNegativoMayor_DescuentaCorrectamente()
+        {
+            tarjeta.DescontarSaldo(1200);
+            tarjeta.CargarSaldo(5000);
+            Assert.AreEqual(3800, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void DescontarSaldo_ViajesPlus_DescuentaCorrectamente()
+        {
+            tarjeta.CargarSaldo(2000);
+            tarjeta.DescontarSaldo(1580);
+            tarjeta.DescontarSaldo(1580);
+            Assert.AreEqual(-1160, tarjeta.ObtenerSaldo());
+
+            tarjeta.CargarSaldo(5000);
+            Assert.AreEqual(3840, tarjeta.ObtenerSaldo());
         }
     }
 }

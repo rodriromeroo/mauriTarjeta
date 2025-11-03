@@ -10,7 +10,7 @@ namespace TarjetaSube {
             return 0;
         }
         
-        public bool SiemprePuedePagar() {
+        public override bool DescontarSaldo(decimal monto) {
             return true;
         }
     }
