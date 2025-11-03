@@ -1,35 +1,22 @@
-name: Build and Test (.NET 5)
+name: .NET 5 Build and Test
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4 
 
-    - name: Setup .NET 5
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '5.0.x'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '5.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore ./TarjetaSube/TarjetaSube.csproj
+      - name: Restore dependencies
+        run: dotnet restore TarjetaSube/TarjetaSube.csproj
 
-    - name: Build
-      run: dotnet build ./TarjetaSube/TarjetaSube.csproj --no-restore
-
-    - name: Run tests with coverage
-      run: dotnet test ./TarjetaSubeTest/TarjetaSubeTest.csproj --collect:"XPlat Code Coverage" --results-directory ./TestResults
-
-    - name: Upload test results (opcional)
-      uses: actions/upload-artifact@v3
-      with:
-        name: coverage-report
-        path: ./TestResults
+      - name: Build
+        run: do
