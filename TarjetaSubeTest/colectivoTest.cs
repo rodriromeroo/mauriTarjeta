@@ -42,8 +42,12 @@ namespace TarjetaSube.Tests
         public void PagarCon_DescontaSaldoDeTarjeta()
         {
             tarjeta.CargarSaldo(5000);
+            decimal saldoInicial = tarjeta.ObtenerSaldo();
+            decimal tarifaEsperada = colectivo.ObtenerValorPasaje();
+
             colectivo.PagarCon(tarjeta);
-            Assert.AreEqual(3420, tarjeta.ObtenerSaldo());
+
+            Assert.AreEqual(saldoInicial - tarifaEsperada, tarjeta.ObtenerSaldo());
         }
 
         [Test]
@@ -58,18 +62,24 @@ namespace TarjetaSube.Tests
         public void PagarCon_BoletoConImporteCorrecto()
         {
             tarjeta.CargarSaldo(5000);
+            decimal tarifaEsperada = colectivo.ObtenerValorPasaje();
+
             Boleto boleto = colectivo.PagarCon(tarjeta);
-            Assert.AreEqual(1580, boleto.ImportePagado);
+
+            Assert.AreEqual(tarifaEsperada, boleto.ImportePagado);
         }
 
         [Test]
         public void PagarCon_ConSaldoNegativoPermitido()
         {
             tarjeta.CargarSaldo(2000);
+            decimal tarifa = colectivo.ObtenerValorPasaje();
+
             colectivo.PagarCon(tarjeta);
             Boleto boleto2 = colectivo.PagarCon(tarjeta);
+
             Assert.IsNotNull(boleto2);
-            Assert.AreEqual(-1160, tarjeta.ObtenerSaldo());
+            Assert.AreEqual(2000 - (tarifa * 2), tarjeta.ObtenerSaldo());
         }
 
         [Test]
@@ -87,8 +97,12 @@ namespace TarjetaSube.Tests
         {
             TarjetaMedioBoleto medio = new TarjetaMedioBoleto();
             medio.CargarSaldo(5000);
+            decimal saldoInicial = medio.ObtenerSaldo();
+            decimal tarifaEsperada = colectivo.ObtenerValorPasaje() / 2;
+
             colectivo.PagarCon(medio);
-            Assert.AreEqual(4210, medio.ObtenerSaldo());
+
+            Assert.AreEqual(saldoInicial - tarifaEsperada, medio.ObtenerSaldo());
         }
 
         [Test]
@@ -131,12 +145,14 @@ namespace TarjetaSube.Tests
             medio.CargarSaldo(5000);
             gratuito.CargarSaldo(5000);
 
+            decimal tarifa = colectivo.ObtenerValorPasaje();
+
             Boleto b1 = colectivo.PagarCon(normal);
             Boleto b2 = colectivo.PagarCon(medio);
             Boleto b3 = colectivo.PagarCon(gratuito);
 
-            Assert.AreEqual(1580, b1.ImportePagado);
-            Assert.AreEqual(790, b2.ImportePagado);
+            Assert.AreEqual(tarifa, b1.ImportePagado);
+            Assert.AreEqual(tarifa / 2, b2.ImportePagado);
             Assert.AreEqual(0, b3.ImportePagado);
         }
 
@@ -149,6 +165,14 @@ namespace TarjetaSube.Tests
 
             Boleto boleto = cole102.PagarCon(t);
             Assert.AreEqual("102", boleto.LineaColectivo);
+        }
+
+        [Test]
+        public void ColectivoUrbano_TieneTarifa1580()
+        {
+            Colectivo urbano = new Colectivo("K");
+            Assert.AreEqual(1580, urbano.ObtenerValorPasaje());
+            Assert.IsFalse(urbano.EsInterurbano());
         }
     }
 }

@@ -35,16 +35,23 @@ namespace TarjetaSube.Tests
         public void PagarCon_DescuentaSoloMitad()
         {
             tarjeta.CargarSaldo(5000);
+            decimal saldoInicial = tarjeta.ObtenerSaldo();
+            decimal tarifaMedioBoleto = colectivo.ObtenerValorPasaje() / 2;
+
             colectivo.PagarCon(tarjeta);
-            Assert.AreEqual(4210, tarjeta.ObtenerSaldo());
+
+            Assert.AreEqual(saldoInicial - tarifaMedioBoleto, tarjeta.ObtenerSaldo());
         }
 
         [Test]
         public void PagarCon_ImportePagadoEsMitad()
         {
             tarjeta.CargarSaldo(3000);
+            decimal tarifaEsperada = colectivo.ObtenerValorPasaje() / 2;
+
             Boleto boleto = colectivo.PagarCon(tarjeta);
-            Assert.AreEqual(790, boleto.ImportePagado);
+
+            Assert.AreEqual(tarifaEsperada, boleto.ImportePagado);
         }
 
         [Test]
@@ -56,28 +63,51 @@ namespace TarjetaSube.Tests
         [Test]
         public void PagarCon_SinSaldo_UsaSaldoNegativo()
         {
+            decimal tarifaMedioBoleto = colectivo.ObtenerValorPasaje() / 2;
+
             Boleto boleto = colectivo.PagarCon(tarjeta);
+
             Assert.IsNotNull(boleto);
-            Assert.AreEqual(-790, tarjeta.ObtenerSaldo());
+            Assert.AreEqual(-tarifaMedioBoleto, tarjeta.ObtenerSaldo());
         }
 
         [Test]
         public void PagarCon_ConSaldoInsuficiente_PuedeUsarHasta1200Negativo()
         {
             tarjeta.CargarSaldo(2000);
-            colectivo.PagarCon(tarjeta);
-            colectivo.PagarCon(tarjeta);
-            colectivo.PagarCon(tarjeta);
-            Assert.AreEqual(-370, tarjeta.ObtenerSaldo());
+            decimal tarifaMedioBoleto = colectivo.ObtenerValorPasaje() / 2;
+
+            colectivo.PagarCon(tarjeta); // viaje 1
+            colectivo.PagarCon(tarjeta); // viaje 2
+            colectivo.PagarCon(tarjeta); // viaje 3
+
+            decimal saldoEsperado = 2000 - (tarifaMedioBoleto * 3);
+            Assert.AreEqual(saldoEsperado, tarjeta.ObtenerSaldo());
         }
 
         [Test]
         public void PagarCon_ExcedeLimiteNegativo_DevuelveNull()
         {
+            // Con saldo 0 y limite -1200, solo puede hacer 1 viaje (790)
+            // El segundo dejaria el saldo en -1580, que excede el limite
             Boleto b1 = colectivo.PagarCon(tarjeta);
             Boleto b2 = colectivo.PagarCon(tarjeta);
-            Boleto b3 = colectivo.PagarCon(tarjeta);
-            Assert.IsNull(b3);
+
+            Assert.IsNotNull(b1);
+            Assert.IsNull(b2); // Este deberia fallar porque -1580 < -1200
+        }
+
+        [Test]
+        public void MedioBoleto_ConColectivoInterurbano_CobraMitadDe3000()
+        {
+            Colectivo interurbano = new Colectivo("Gálvez", true);
+            tarjeta.CargarSaldo(5000);
+
+            Boleto boleto = interurbano.PagarCon(tarjeta);
+
+            Assert.IsNotNull(boleto);
+            Assert.AreEqual(1500, boleto.ImportePagado); // mitad de 3000
+            Assert.AreEqual(3500, tarjeta.ObtenerSaldo());
         }
     }
 }
