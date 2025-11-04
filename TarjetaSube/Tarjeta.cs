@@ -7,6 +7,8 @@ namespace TarjetaSube
     {
         protected decimal saldo;
         private List<decimal> montosPermitidos;
+
+        // limite negativo de -1200
         private const decimal LIMITE_NEGATIVO = -1200m;
         private const decimal LIMITE_MAXIMO = 56000m; // cambiia de 40000 a 56000
         private decimal saldoPendiente; //  para saldo excedente
@@ -25,11 +27,7 @@ namespace TarjetaSube
             return saldo;
         }
 
-        public decimal ObtenerSaldoPendiente()
-        {
-            return saldoPendiente;
-        }
-
+        /// carga saldo monto permitido y carga max de 40k, si el saldo es negativo se paga la deuda
         public bool CargarSaldo(decimal monto)
         {
             if (!montosPermitidos.Contains(monto))
@@ -58,21 +56,8 @@ namespace TarjetaSube
             return true;
         }
 
-        // para acreditar saldo pendiente
-        public void AcreditarCarga()
-        {
-            if (saldoPendiente <= 0) return;
-
-            decimal espacioDisponible = LIMITE_MAXIMO - saldo;
-            if (espacioDisponible > 0)
-            {
-                decimal montoAAcreditar = Math.Min(saldoPendiente, espacioDisponible);
-                saldo += montoAAcreditar;
-                saldoPendiente -= montoAAcreditar;
-            }
-        }
-
-        public virtual bool DescontarSaldo(decimal monto)
+        /// descuenta saldo y no deja pasar de -1200
+        public bool DescontarSaldo(decimal monto)
         {
             decimal saldoResultado = saldo - monto;
 

@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\Malala\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Malala\\.nuget\\packages"
-    ]
-  }
-}
