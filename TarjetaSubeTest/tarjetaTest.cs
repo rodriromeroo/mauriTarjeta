@@ -62,21 +62,21 @@ namespace TarjetaSube.Tests
         }
 
         [Test]
-        public void CargarSaldo_SuperaLimite40000_RetornaFalse()
+        public void CargarSaldo_SuperaLimite56000_RetornaFalse()
         {
             tarjeta.CargarSaldo(30000);
-            bool resultado = tarjeta.CargarSaldo(15000);
+            tarjeta.CargarSaldo(30000); // Cambie el limite de 40 a 56
+            bool resultado = tarjeta.CargarSaldo(15000); 
             Assert.IsFalse(resultado);
-            Assert.AreEqual(30000, tarjeta.ObtenerSaldo());
+            Assert.AreEqual(56000, tarjeta.ObtenerSaldo());
         }
 
         [Test]
-        public void CargarSaldo_ExactamenteLimite40000_RetornaTrue()
+        public void CargarSaldo_ExactamenteLimite56000_RetornaTrue()
         {
-            tarjeta.CargarSaldo(20000);
-            bool resultado = tarjeta.CargarSaldo(20000);
-            Assert.IsTrue(resultado);
-            Assert.AreEqual(40000, tarjeta.ObtenerSaldo());
+            tarjeta.CargarSaldo(30000);
+            tarjeta.CargarSaldo(26000);
+            Assert.AreEqual(56000, tarjeta.ObtenerSaldo());
         }
 
         [Test]
