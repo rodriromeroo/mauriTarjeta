@@ -1,13 +1,69 @@
+using System;
 using NUnit.Framework;
 using TarjetaSube;
 
-namespace TarjetaSubeTest
+namespace TarjetaSube.Tests
 {
     [TestFixture]
-    public class BoletoUsoFrecuenteTest
+    public class BoletoUsoFrecuenteTests
     {
+        private Tarjeta tarjeta;
+
+        [SetUp]
+        public void Setup()
+        {
+            tarjeta = new Tarjeta();
+        }
+
         [Test]
-        public void Tarjeta_Viajes1a29_TarifaNormal()
+        public void ObtenerSaldo_TarjetaNueva_DevuelveCero()
+        {
+            decimal saldo = tarjeta.ObtenerSaldo();
+            Assert.AreEqual(0, saldo);
+        }
+
+        [Test]
+        public void CargarSaldo_MontoValido2000_RetornaTrue()
+        {
+            bool resultado = tarjeta.CargarSaldo(2000);
+            Assert.IsTrue(resultado);
+            Assert.AreEqual(2000, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void CargarSaldo_MontoValido5000_RetornaTrue()
+        {
+            bool resultado = tarjeta.CargarSaldo(5000);
+            Assert.IsTrue(resultado);
+            Assert.AreEqual(5000, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void CargarSaldo_MontoValido30000_RetornaTrue()
+        {
+            bool resultado = tarjeta.CargarSaldo(30000);
+            Assert.IsTrue(resultado);
+            Assert.AreEqual(30000, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void CargarSaldo_MontoInvalido1000_RetornaFalse()
+        {
+            bool resultado = tarjeta.CargarSaldo(1000);
+            Assert.IsFalse(resultado);
+            Assert.AreEqual(0, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void CargarSaldo_MontoInvalido7000_RetornaFalse()
+        {
+            bool resultado = tarjeta.CargarSaldo(7000);
+            Assert.IsFalse(resultado);
+            Assert.AreEqual(0, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void CargarSaldo_SuperaLimite56000_GuardaExcedente()
         {
             // Arrange
             Tarjeta tarjeta = new Tarjeta();
@@ -244,7 +300,7 @@ namespace TarjetaSubeTest
                 tarjeta.CargarSaldo(30000);
             }
 
-            Colectivo interurbano = new Colectivo("Gálvez", true);
+            Colectivo interurbano = new Colectivo("GÃ¡lvez", true);
             decimal tarifa = interurbano.ObtenerValorPasaje(); // 3000
 
             // hacer 29 viajes

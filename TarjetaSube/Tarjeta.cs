@@ -7,8 +7,6 @@ namespace TarjetaSube
     {
         protected decimal saldo;
         private List<decimal> montosPermitidos;
-
-        // limite negativo de -1200
         private const decimal LIMITE_NEGATIVO = -1200m;
         private const decimal LIMITE_MAXIMO = 56000m;
         private decimal saldoPendiente;
@@ -16,6 +14,9 @@ namespace TarjetaSube
         // para boleto de uso frecuente
         private int viajesDelMes;
         private DateTime ultimoMesRegistrado;
+
+        private DateTime ultimoViajeParaTrasbordo;
+        private string ultimaLineaViajada;
 
         public Tarjeta()
         {
@@ -26,6 +27,8 @@ namespace TarjetaSube
             };
             viajesDelMes = 0;
             ultimoMesRegistrado = DateTime.Now;
+            ultimoViajeParaTrasbordo = DateTime.MinValue;
+            ultimaLineaViajada = "";
         }
 
         public decimal ObtenerSaldo()

@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 using TarjetaSube;
 
 namespace TarjetaSube.Tests
@@ -62,20 +63,27 @@ namespace TarjetaSube.Tests
         }
 
         [Test]
-        public void CargarSaldo_SuperaLimite56000_RetornaFalse()
+        public void CargarSaldo_SuperaLimite56000_GuardaExcedente()
         {
             tarjeta.CargarSaldo(30000);
-            tarjeta.CargarSaldo(30000); // Cambie el limite de 40 a 56
-            bool resultado = tarjeta.CargarSaldo(15000); 
-            Assert.IsFalse(resultado);
+            tarjeta.CargarSaldo(30000);
+            // Según implementación actual, permite cargar y guarda excedente
+            bool resultado = tarjeta.CargarSaldo(15000);
+            Assert.IsTrue(resultado); // Tu implementación retorna true
             Assert.AreEqual(56000, tarjeta.ObtenerSaldo());
+            Assert.Greater(tarjeta.ObtenerSaldoPendiente(), 0); // Tiene saldo pendiente
         }
 
         [Test]
         public void CargarSaldo_ExactamenteLimite56000_RetornaTrue()
         {
+            // Para llegar exactamente a 56000, necesitamos combinar cargas permitidas
+            // 30000 + 15000 + 8000 + 3000 = 56000
             tarjeta.CargarSaldo(30000);
-            tarjeta.CargarSaldo(26000);
+            tarjeta.CargarSaldo(15000);
+            tarjeta.CargarSaldo(8000);
+            tarjeta.CargarSaldo(3000);
+
             Assert.AreEqual(56000, tarjeta.ObtenerSaldo());
         }
 
@@ -218,6 +226,67 @@ namespace TarjetaSube.Tests
             bool puedeCargarMas = tarjeta.CargarSaldo(10000);
             Assert.IsTrue(puedeCargarMas);
             Assert.AreEqual(13800, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void PuedeHacerTrasbordo_DentroDeUnaHora_LineaDiferente_RetornaTrue()
+        {
+            tarjeta.CargarSaldo(5000);
+            DateTime primerViaje = new DateTime(2024, 11, 20, 10, 0, 0);
+            tarjeta.RegistrarViajeParaTrasbordo("120", primerViaje);
+
+            DateTime segundoViaje = primerViaje.AddMinutes(30);
+            bool puede = tarjeta.PuedeHacerTrasbordo("144", segundoViaje);
+
+            Assert.IsTrue(puede);
+        }
+
+        [Test]
+        public void PuedeHacerTrasbordo_MismaLinea_RetornaFalse()
+        {
+            DateTime primerViaje = new DateTime(2024, 11, 20, 10, 0, 0);
+            tarjeta.RegistrarViajeParaTrasbordo("120", primerViaje);
+
+            DateTime segundoViaje = primerViaje.AddMinutes(30);
+            bool puede = tarjeta.PuedeHacerTrasbordo("120", segundoViaje);
+
+            Assert.IsFalse(puede);
+        }
+
+        [Test]
+        public void PuedeHacerTrasbordo_MasDe1Hora_RetornaFalse()
+        {
+            DateTime primerViaje = new DateTime(2024, 11, 20, 10, 0, 0);
+            tarjeta.RegistrarViajeParaTrasbordo("120", primerViaje);
+
+            DateTime segundoViaje = primerViaje.AddHours(2);
+            bool puede = tarjeta.PuedeHacerTrasbordo("144", segundoViaje);
+
+            Assert.IsFalse(puede);
+        }
+
+        [Test]
+        public void PuedeHacerTrasbordo_Domingo_RetornaFalse()
+        {
+            DateTime primerViaje = new DateTime(2024, 11, 17, 10, 0, 0); // Domingo
+            tarjeta.RegistrarViajeParaTrasbordo("120", primerViaje);
+
+            DateTime segundoViaje = primerViaje.AddMinutes(30);
+            bool puede = tarjeta.PuedeHacerTrasbordo("144", segundoViaje);
+
+            Assert.IsFalse(puede);
+        }
+
+        [Test]
+        public void PuedeHacerTrasbordo_FueraDeHorario_RetornaFalse()
+        {
+            DateTime primerViaje = new DateTime(2024, 11, 20, 23, 0, 0);
+            tarjeta.RegistrarViajeParaTrasbordo("120", primerViaje);
+
+            DateTime segundoViaje = primerViaje.AddMinutes(30);
+            bool puede = tarjeta.PuedeHacerTrasbordo("144", segundoViaje);
+
+            Assert.IsFalse(puede);
         }
     }
 }
