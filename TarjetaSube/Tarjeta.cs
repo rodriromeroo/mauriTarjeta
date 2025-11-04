@@ -9,8 +9,9 @@ namespace TarjetaSube
         private List<decimal> montosPermitidos;
         private const decimal LIMITE_NEGATIVO = -1200m;
         private const decimal LIMITE_MAXIMO = 56000m;
-        protected decimal saldoPendiente;
+        private decimal saldoPendiente;
 
+        // para boleto de uso frecuente
         private int viajesDelMes;
         private DateTime ultimoMesRegistrado;
 
@@ -43,83 +44,51 @@ namespace TarjetaSube
         public int ObtenerViajesDelMes()
         {
             DateTime ahora = DateTime.Now;
-            if (ahora.Month != ultimoMesRegistrado.Month || ahora.Year != ultimoMesRegistrado.Year)
-            {
-                viajesDelMes = 0;
-                ultimoMesRegistrado = ahora;
-            }
-            return viajesDelMes;
-        }
 
-        public void RegistrarViaje()
-        {
-            DateTime ahora = DateTime.Now;
+            // Si cambió el mes, reiniciar contador
             if (ahora.Month != ultimoMesRegistrado.Month || ahora.Year != ultimoMesRegistrado.Year)
             {
                 viajesDelMes = 0;
                 ultimoMesRegistrado = ahora;
             }
-            viajesDelMes++;
+
+            return viajesDelMes;
         }
 
         public decimal CalcularDescuentoUsoFrecuente(decimal montoBase)
         {
-            int viajes = ObtenerViajesDelMes();
+            DateTime ahora = DateTime.Now;
 
-            if (viajes >= 1 && viajes <= 29)
+            // Verificar si cambió el mes
+            if (ahora.Month != ultimoMesRegistrado.Month || ahora.Year != ultimoMesRegistrado.Year)
             {
-                return montoBase;
+                viajesDelMes = 0;
+                ultimoMesRegistrado = ahora;
             }
-            else if (viajes >= 30 && viajes <= 59)
+
+            // Incrementar contador de viajes
+            viajesDelMes++;
+
+            // Aplicar descuentos según cantidad de viajes
+            if (viajesDelMes >= 1 && viajesDelMes <= 29)
             {
-                return montoBase * 0.80m;
+                return montoBase; // Tarifa normal
             }
-            else if (viajes >= 60 && viajes <= 80)
+            else if (viajesDelMes >= 30 && viajesDelMes <= 59)
             {
-                return montoBase * 0.75m;
+                return montoBase * 0.80m; // 20% descuento
             }
-            else
+            else if (viajesDelMes >= 60 && viajesDelMes <= 80)
             {
-                return montoBase;
+                return montoBase * 0.75m; // 25% descuento
+            }
+            else // viaje 81 en adelante
+            {
+                return montoBase; // Tarifa normal
             }
         }
 
-        public virtual bool PuedeHacerTrasbordo(string lineaColectivo, DateTime ahora)
-        {
-            // Debe ser línea diferente
-            if (ultimaLineaViajada == lineaColectivo)
-            {
-                return false;
-            }
-
-            // Debe ser dentro de 1 hora
-            TimeSpan tiempoTranscurrido = ahora - ultimoViajeParaTrasbordo;
-            if (tiempoTranscurrido.TotalHours > 1)
-            {
-                return false;
-            }
-
-            // Lunes a sábado (no domingos)
-            if (ahora.DayOfWeek == DayOfWeek.Sunday)
-            {
-                return false;
-            }
-
-            // De 7:00 a 22:00
-            if (ahora.Hour < 7 || ahora.Hour >= 22)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        public void RegistrarViajeParaTrasbordo(string lineaColectivo, DateTime ahora)
-        {
-            ultimoViajeParaTrasbordo = ahora;
-            ultimaLineaViajada = lineaColectivo;
-        }
-
+        /// carga saldo monto permitido y carga max de 56k, si el saldo es negativo se paga la deuda
         public bool CargarSaldo(decimal monto)
         {
             if (!montosPermitidos.Contains(monto))
@@ -146,6 +115,27 @@ namespace TarjetaSube
             return true;
         }
 
+        public void AcreditarCarga()
+        {
+            if (saldoPendiente > 0)
+            {
+                decimal espacioDisponible = LIMITE_MAXIMO - saldo;
+
+                if (espacioDisponible > 0)
+                {
+                    if (saldoPendiente <= espacioDisponible)
+                    {
+                        saldo += saldoPendiente;
+                        saldoPendiente = 0;
+                    }
+                    else
+                    {
+                        saldo += espacioDisponible;
+                        saldoPendiente -= espacioDisponible;
+                    }
+                }
+            }
+        }
         public virtual bool DescontarSaldo(decimal monto)
         {
             decimal saldoResultado = saldo - monto;
@@ -164,31 +154,3 @@ namespace TarjetaSube
 
             return true;
         }
-
-        protected void AcreditarCarga()
-        {
-            if (saldoPendiente <= 0)
-            {
-                return;
-            }
-
-            decimal espacioDisponible = LIMITE_MAXIMO - saldo;
-
-            if (espacioDisponible <= 0)
-            {
-                return;
-            }
-
-            if (saldoPendiente <= espacioDisponible)
-            {
-                saldo += saldoPendiente;
-                saldoPendiente = 0;
-            }
-            else
-            {
-                saldo += espacioDisponible;
-                saldoPendiente -= espacioDisponible;
-            }
-        }
-    }
-}

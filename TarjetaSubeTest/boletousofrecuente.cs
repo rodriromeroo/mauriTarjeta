@@ -65,231 +65,259 @@ namespace TarjetaSube.Tests
         [Test]
         public void CargarSaldo_SuperaLimite56000_GuardaExcedente()
         {
+            // Arrange
+            Tarjeta tarjeta = new Tarjeta();
             tarjeta.CargarSaldo(30000);
             tarjeta.CargarSaldo(30000);
-            // Según implementación actual, permite cargar y guarda excedente
-            bool resultado = tarjeta.CargarSaldo(15000);
-            Assert.IsTrue(resultado); // Tu implementación retorna true
-            Assert.AreEqual(56000, tarjeta.ObtenerSaldo());
-            Assert.Greater(tarjeta.ObtenerSaldoPendiente(), 0); // Tiene saldo pendiente
+            Colectivo colectivo = new Colectivo("102");
+
+            decimal saldoInicial = tarjeta.ObtenerSaldo();
+            decimal tarifa = colectivo.ObtenerValorPasaje();
+
+            // Act - hacer 29 viajes
+            for (int i = 0; i < 29; i++)
+            {
+                Boleto boleto = colectivo.PagarCon(tarjeta);
+                Assert.IsNotNull(boleto);
+                Assert.AreEqual(tarifa, boleto.ImportePagado);
+            }
+
+            // Assert
+            decimal saldoFinal = tarjeta.ObtenerSaldo();
+            decimal totalGastado = saldoInicial - saldoFinal;
+            Assert.AreEqual(29 * tarifa, totalGastado);
+            Assert.AreEqual(29, tarjeta.ObtenerViajesDelMes());
         }
 
         [Test]
-        public void CargarSaldo_ExactamenteLimite56000_RetornaTrue()
+        public void Tarjeta_Viajes30a59_Descuento20Porciento()
         {
-            // Para llegar exactamente a 56000, necesitamos combinar cargas permitidas
-            // 30000 + 20000 + 5000 + 1000 = 56000, pero 1000 no está permitido
-            // Opciones: 30000 + 25000 + 1000 = 56000 (1000 no permitido)
-            // Mejor: 30000 + 20000 + 5000 + 1000 = 56000 (no funciona)
-            // Solución: 30000 + 15000 + 8000 + 3000 = 56000
+            // Arrange
+            Tarjeta tarjeta = new Tarjeta();
             tarjeta.CargarSaldo(30000);
-            tarjeta.CargarSaldo(15000);
-            tarjeta.CargarSaldo(8000);
-            tarjeta.CargarSaldo(3000);
+            tarjeta.CargarSaldo(30000);
+            Colectivo colectivo = new Colectivo("K");
 
-            Assert.AreEqual(56000, tarjeta.ObtenerSaldo());
+            decimal tarifa = colectivo.ObtenerValorPasaje();
+
+            // hacer los primeros 29 viajes
+            for (int i = 0; i < 29; i++)
+            {
+                colectivo.PagarCon(tarjeta);
+            }
+
+            decimal saldoAntes = tarjeta.ObtenerSaldo();
+
+            // Act - viaje 30 (deberia tener 20% descuento)
+            Boleto boleto30 = colectivo.PagarCon(tarjeta);
+
+            // Assert
+            decimal montoEsperado = tarifa * 0.80m; // 20% descuento
+            Assert.AreEqual(montoEsperado, boleto30.ImportePagado);
+            Assert.AreEqual(saldoAntes - montoEsperado, tarjeta.ObtenerSaldo());
         }
 
         [Test]
-        public void CargarSaldo_VariasCargas_SumaCorrectamente()
+        public void Tarjeta_Viajes60a80_Descuento25Porciento()
         {
-            tarjeta.CargarSaldo(5000);
-            tarjeta.CargarSaldo(3000);
-            tarjeta.CargarSaldo(2000);
-            Assert.AreEqual(10000, tarjeta.ObtenerSaldo());
+            // Arrange
+            Tarjeta tarjeta = new Tarjeta();
+            tarjeta.CargarSaldo(30000);
+            tarjeta.CargarSaldo(30000);
+            tarjeta.CargarSaldo(30000);
+            Colectivo colectivo = new Colectivo("144");
+
+            decimal tarifa = colectivo.ObtenerValorPasaje();
+
+            // hacer los primeros 59 viajes
+            for (int i = 0; i < 59; i++)
+            {
+                colectivo.PagarCon(tarjeta);
+            }
+
+            decimal saldoAntes = tarjeta.ObtenerSaldo();
+
+            // Act - viaje 60 (deberia tener 25% descuento)
+            Boleto boleto60 = colectivo.PagarCon(tarjeta);
+
+            // Assert
+            decimal montoEsperado = tarifa * 0.75m; // 25% descuento
+            Assert.AreEqual(montoEsperado, boleto60.ImportePagado);
+            Assert.AreEqual(saldoAntes - montoEsperado, tarjeta.ObtenerSaldo());
         }
 
         [Test]
-        public void DescontarSaldo_ConSaldoSuficiente_RetornaTrue()
+        public void Tarjeta_Viajes81EnAdelante_TarifaNormal()
         {
-            tarjeta.CargarSaldo(5000);
-            bool resultado = tarjeta.DescontarSaldo(1580);
-            Assert.IsTrue(resultado);
-            Assert.AreEqual(3420, tarjeta.ObtenerSaldo());
+            // Arrange
+            Tarjeta tarjeta = new Tarjeta();
+            // cargar bastante saldo
+            for (int i = 0; i < 5; i++)
+            {
+                tarjeta.CargarSaldo(30000);
+            }
+
+            Colectivo colectivo = new Colectivo("27");
+            decimal tarifa = colectivo.ObtenerValorPasaje();
+
+            // hacer los primeros 80 viajes
+            for (int i = 0; i < 80; i++)
+            {
+                colectivo.PagarCon(tarjeta);
+            }
+
+            decimal saldoAntes = tarjeta.ObtenerSaldo();
+
+            // Act - viaje 81 (vuelve a tarifa normal)
+            Boleto boleto81 = colectivo.PagarCon(tarjeta);
+
+            // Assert
+            Assert.AreEqual(tarifa, boleto81.ImportePagado);
+            Assert.AreEqual(saldoAntes - tarifa, tarjeta.ObtenerSaldo());
         }
 
         [Test]
-        public void DescontarSaldo_MontoExacto_DejaEnCero()
+        public void Tarjeta_VerificaDescuentos_EnRangos()
         {
-            tarjeta.CargarSaldo(2000);
-            bool resultado = tarjeta.DescontarSaldo(2000);
-            Assert.IsTrue(resultado);
-            Assert.AreEqual(0, tarjeta.ObtenerSaldo());
+            // Arrange
+            Tarjeta tarjeta = new Tarjeta();
+            for (int i = 0; i < 5; i++)
+            {
+                tarjeta.CargarSaldo(30000);
+            }
+            Colectivo colectivo = new Colectivo("133");
+            decimal tarifa = colectivo.ObtenerValorPasaje();
+
+            // Act y Assert
+            // viajes 1-29: tarifa normal
+            for (int i = 1; i <= 29; i++)
+            {
+                Boleto b = colectivo.PagarCon(tarjeta);
+                Assert.AreEqual(tarifa, b.ImportePagado, $"Viaje {i} deberia ser {tarifa}");
+            }
+
+            // viajes 30-59: 20% descuento
+            decimal tarifa20desc = tarifa * 0.80m;
+            for (int i = 30; i <= 59; i++)
+            {
+                Boleto b = colectivo.PagarCon(tarjeta);
+                Assert.AreEqual(tarifa20desc, b.ImportePagado, $"Viaje {i} deberia ser {tarifa20desc}");
+            }
+
+            // viajes 60-80: 25% descuento
+            decimal tarifa25desc = tarifa * 0.75m;
+            for (int i = 60; i <= 80; i++)
+            {
+                Boleto b = colectivo.PagarCon(tarjeta);
+                Assert.AreEqual(tarifa25desc, b.ImportePagado, $"Viaje {i} deberia ser {tarifa25desc}");
+            }
+
+            // viaje 81: vuelve a normal
+            Boleto b81 = colectivo.PagarCon(tarjeta);
+            Assert.AreEqual(tarifa, b81.ImportePagado);
         }
 
         [Test]
-        public void DescontarSaldo_VariosDescuentos_CalculaBien()
+        public void Tarjeta_ContadorViajes_FuncionaCorrectamente()
         {
-            tarjeta.CargarSaldo(10000);
-            tarjeta.DescontarSaldo(1580);
-            tarjeta.DescontarSaldo(1580);
-            tarjeta.DescontarSaldo(1580);
-            Assert.AreEqual(5260, tarjeta.ObtenerSaldo());
+            // Arrange
+            Tarjeta tarjeta = new Tarjeta();
+            tarjeta.CargarSaldo(30000);
+            Colectivo colectivo = new Colectivo("G");
+
+            // Act y Assert
+            Assert.AreEqual(0, tarjeta.ObtenerViajesDelMes());
+
+            colectivo.PagarCon(tarjeta);
+            Assert.AreEqual(1, tarjeta.ObtenerViajesDelMes());
+
+            colectivo.PagarCon(tarjeta);
+            Assert.AreEqual(2, tarjeta.ObtenerViajesDelMes());
+
+            for (int i = 0; i < 10; i++)
+            {
+                colectivo.PagarCon(tarjeta);
+            }
+            Assert.AreEqual(12, tarjeta.ObtenerViajesDelMes());
         }
 
         [Test]
-        public void DescontarSaldo_NoPermiteMenosDeMenos1200_RetornaFalse()
+        public void MedioBoleto_NoAplicaUsoFrecuente()
         {
-            bool resultado = tarjeta.DescontarSaldo(1300);
-            Assert.IsFalse(resultado);
-            Assert.AreEqual(0, tarjeta.ObtenerSaldo());
+            // Arrange
+            TarjetaMedioBoleto medio = new TarjetaMedioBoleto();
+            medio.CargarSaldo(30000);
+            medio.CargarSaldo(30000);
+            Colectivo colectivo = new Colectivo("102");
+
+            decimal tarifaMedioBoleto = colectivo.ObtenerValorPasaje() / 2;
+
+            // hacer muchos viajes
+            for (int i = 0; i < 50; i++)
+            {
+                colectivo.PagarCon(medio);
+            }
+
+            // Act - el viaje 51 deberia seguir siendo medio boleto normal
+            Boleto boleto = colectivo.PagarCon(medio);
+
+            // Assert
+            Assert.AreEqual(tarifaMedioBoleto, boleto.ImportePagado); // siempre mitad, no descuento adicional
         }
 
         [Test]
-        public void DescontarSaldo_PermiteHastaMenos1200_RetornaTrue()
+        public void BoletoGratuito_NoAplicaUsoFrecuente()
         {
-            bool resultado = tarjeta.DescontarSaldo(1200);
-            Assert.IsTrue(resultado);
-            Assert.AreEqual(-1200, tarjeta.ObtenerSaldo());
+            // Arrange
+            TarjetaBoletoGratuito gratuito = new TarjetaBoletoGratuito();
+            gratuito.CargarSaldo(20000);
+            gratuito.CargarSaldo(30000);
+            Colectivo colectivo = new Colectivo("K");
+
+            decimal tarifa = colectivo.ObtenerValorPasaje();
+
+            // hacer varios viajes
+            for (int i = 0; i < 40; i++)
+            {
+                colectivo.PagarCon(gratuito);
+            }
+
+            // Act - verificar saldo
+            decimal saldo = gratuito.ObtenerSaldo();
+
+            // Assert - los dos primeros gratis, el resto a precio completo sin descuento
+            decimal gastoEsperado = 38 * tarifa; // 40 viajes - 2 gratis = 38 * tarifa
+            Assert.AreEqual(50000 - gastoEsperado, saldo);
         }
 
         [Test]
-        public void DescontarSaldo_PuedeUsarSaldoNegativo()
+        public void Tarjeta_UsoFrecuente_ConColectivoInterurbano()
         {
-            tarjeta.CargarSaldo(2000);
-            tarjeta.DescontarSaldo(2500);
-            Assert.AreEqual(-500, tarjeta.ObtenerSaldo());
-        }
+            // Arrange
+            Tarjeta tarjeta = new Tarjeta();
+            for (int i = 0; i < 10; i++)
+            {
+                tarjeta.CargarSaldo(30000);
+            }
 
-        [Test]
-        public void CargarSaldo_ConSaldoNegativo_DescuentaDeuda()
-        {
-            tarjeta.DescontarSaldo(1000);
-            tarjeta.CargarSaldo(3000);
-            Assert.AreEqual(2000, tarjeta.ObtenerSaldo());
-        }
+            Colectivo interurbano = new Colectivo("GÃ¡lvez", true);
+            decimal tarifa = interurbano.ObtenerValorPasaje(); // 3000
 
-        [Test]
-        public void CargarSaldo_ConSaldoNegativoMayor_DescuentaCorrectamente()
-        {
-            tarjeta.DescontarSaldo(1200);
-            tarjeta.CargarSaldo(5000);
-            Assert.AreEqual(3800, tarjeta.ObtenerSaldo());
-        }
+            // hacer 29 viajes
+            for (int i = 0; i < 29; i++)
+            {
+                interurbano.PagarCon(tarjeta);
+            }
 
-        [Test]
-        public void DescontarSaldo_ViajesPlus_DescuentaCorrectamente()
-        {
-            tarjeta.CargarSaldo(2000);
-            tarjeta.DescontarSaldo(1580);
-            tarjeta.DescontarSaldo(1580);
-            Assert.AreEqual(-1160, tarjeta.ObtenerSaldo());
+            decimal saldoAntes = tarjeta.ObtenerSaldo();
 
-            tarjeta.CargarSaldo(5000);
-            Assert.AreEqual(3840, tarjeta.ObtenerSaldo());
-        }
+            // Act - viaje 30 con 20% descuento
+            Boleto boleto30 = interurbano.PagarCon(tarjeta);
 
-        [Test]
-        public void CargarSaldo_TodosLosMontos_Funcionan()
-        {
-            Assert.IsTrue(tarjeta.CargarSaldo(2000));
-            tarjeta = new Tarjeta();
-            Assert.IsTrue(tarjeta.CargarSaldo(3000));
-            tarjeta = new Tarjeta();
-            Assert.IsTrue(tarjeta.CargarSaldo(4000));
-            tarjeta = new Tarjeta();
-            Assert.IsTrue(tarjeta.CargarSaldo(5000));
-            tarjeta = new Tarjeta();
-            Assert.IsTrue(tarjeta.CargarSaldo(8000));
-            tarjeta = new Tarjeta();
-            Assert.IsTrue(tarjeta.CargarSaldo(10000));
-            tarjeta = new Tarjeta();
-            Assert.IsTrue(tarjeta.CargarSaldo(15000));
-            tarjeta = new Tarjeta();
-            Assert.IsTrue(tarjeta.CargarSaldo(20000));
-            tarjeta = new Tarjeta();
-            Assert.IsTrue(tarjeta.CargarSaldo(25000));
-            tarjeta = new Tarjeta();
-            Assert.IsTrue(tarjeta.CargarSaldo(30000));
-        }
-
-        [Test]
-        public void DescontarSaldo_EnLimiteExacto_Funciona()
-        {
-            bool resultado = tarjeta.DescontarSaldo(1200);
-            Assert.IsTrue(resultado);
-            Assert.AreEqual(-1200, tarjeta.ObtenerSaldo());
-        }
-
-        [Test]
-        public void DescontarSaldo_UnPesoMasDelLimite_RetornaFalse()
-        {
-            bool resultado = tarjeta.DescontarSaldo(1201);
-            Assert.IsFalse(resultado);
-            Assert.AreEqual(0, tarjeta.ObtenerSaldo());
-        }
-
-        [Test]
-        public void CargarSaldo_DespuesDeLimiteNegativo_Recupera()
-        {
-            tarjeta.DescontarSaldo(1200);
-            tarjeta.CargarSaldo(5000);
-            Assert.AreEqual(3800, tarjeta.ObtenerSaldo());
-
-            bool puedeCargarMas = tarjeta.CargarSaldo(10000);
-            Assert.IsTrue(puedeCargarMas);
-            Assert.AreEqual(13800, tarjeta.ObtenerSaldo());
-        }
-
-        [Test]
-        public void PuedeHacerTrasbordo_DentroDeUnaHora_LineaDiferente_RetornaTrue()
-        {
-            tarjeta.CargarSaldo(5000);
-            DateTime primerViaje = new DateTime(2024, 11, 20, 10, 0, 0);
-            tarjeta.RegistrarViajeParaTrasbordo("120", primerViaje);
-
-            DateTime segundoViaje = primerViaje.AddMinutes(30);
-            bool puede = tarjeta.PuedeHacerTrasbordo("144", segundoViaje);
-
-            Assert.IsTrue(puede);
-        }
-
-        [Test]
-        public void PuedeHacerTrasbordo_MismaLinea_RetornaFalse()
-        {
-            DateTime primerViaje = new DateTime(2024, 11, 20, 10, 0, 0);
-            tarjeta.RegistrarViajeParaTrasbordo("120", primerViaje);
-
-            DateTime segundoViaje = primerViaje.AddMinutes(30);
-            bool puede = tarjeta.PuedeHacerTrasbordo("120", segundoViaje);
-
-            Assert.IsFalse(puede);
-        }
-
-        [Test]
-        public void PuedeHacerTrasbordo_MasDe1Hora_RetornaFalse()
-        {
-            DateTime primerViaje = new DateTime(2024, 11, 20, 10, 0, 0);
-            tarjeta.RegistrarViajeParaTrasbordo("120", primerViaje);
-
-            DateTime segundoViaje = primerViaje.AddHours(2);
-            bool puede = tarjeta.PuedeHacerTrasbordo("144", segundoViaje);
-
-            Assert.IsFalse(puede);
-        }
-
-        [Test]
-        public void PuedeHacerTrasbordo_Domingo_RetornaFalse()
-        {
-            DateTime primerViaje = new DateTime(2024, 11, 17, 10, 0, 0); // Domingo
-            tarjeta.RegistrarViajeParaTrasbordo("120", primerViaje);
-
-            DateTime segundoViaje = primerViaje.AddMinutes(30);
-            bool puede = tarjeta.PuedeHacerTrasbordo("144", segundoViaje);
-
-            Assert.IsFalse(puede);
-        }
-
-        [Test]
-        public void PuedeHacerTrasbordo_FueraDeHorario_RetornaFalse()
-        {
-            DateTime primerViaje = new DateTime(2024, 11, 20, 23, 0, 0);
-            tarjeta.RegistrarViajeParaTrasbordo("120", primerViaje);
-
-            DateTime segundoViaje = primerViaje.AddMinutes(30);
-            bool puede = tarjeta.PuedeHacerTrasbordo("144", segundoViaje);
-
-            Assert.IsFalse(puede);
+            // Assert
+            decimal montoEsperado = tarifa * 0.80m; // 20% descuento sobre 3000 = 2400
+            Assert.AreEqual(montoEsperado, boleto30.ImportePagado);
+            Assert.AreEqual(saldoAntes - montoEsperado, tarjeta.ObtenerSaldo());
         }
     }
 }
