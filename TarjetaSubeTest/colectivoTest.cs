@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 using TarjetaSube;
 
 namespace TarjetaSube.Tests
@@ -149,6 +150,109 @@ namespace TarjetaSube.Tests
 
             Boleto boleto = cole102.PagarCon(t);
             Assert.AreEqual("102", boleto.LineaColectivo);
+        }
+
+        [Test]
+        public void PagarCon_Trasbordo_NoCobraNada()
+        {
+            tarjeta.CargarSaldo(5000);
+
+            DateTime tiempo1 = new DateTime(2024, 11, 20, 10, 0, 0);
+            Colectivo cole1 = new Colectivo("120");
+            Boleto boleto1 = cole1.PagarCon(tarjeta, tiempo1);
+
+            decimal saldoDespuesPrimero = tarjeta.ObtenerSaldo();
+
+            DateTime tiempo2 = tiempo1.AddMinutes(30);
+            Colectivo cole2 = new Colectivo("144");
+            Boleto boleto2 = cole2.PagarCon(tarjeta, tiempo2);
+
+            Assert.IsTrue(boleto2.EsTransbordo);
+            Assert.AreEqual(0, boleto2.ImportePagado);
+            Assert.AreEqual(saldoDespuesPrimero, tarjeta.ObtenerSaldo());
+        }
+
+        [Test]
+        public void PagarCon_Trasbordo_MismaLinea_CobraNormal()
+        {
+            tarjeta.CargarSaldo(10000);
+
+            DateTime tiempo1 = new DateTime(2024, 11, 20, 10, 0, 0);
+            Boleto boleto1 = colectivo.PagarCon(tarjeta, tiempo1);
+            decimal saldoDespues1 = tarjeta.ObtenerSaldo();
+
+            DateTime tiempo2 = tiempo1.AddMinutes(30);
+            Boleto boleto2 = colectivo.PagarCon(tarjeta, tiempo2);
+
+            Assert.IsFalse(boleto2.EsTransbordo);
+            Assert.AreEqual(1580, boleto2.ImportePagado);
+        }
+
+        [Test]
+        public void PagarCon_TrasbordomasDe1Hora_CobraNormal()
+        {
+            tarjeta.CargarSaldo(10000);
+
+            DateTime tiempo1 = new DateTime(2024, 11, 20, 10, 0, 0);
+            Colectivo cole1 = new Colectivo("120");
+            cole1.PagarCon(tarjeta, tiempo1);
+
+            DateTime tiempo2 = tiempo1.AddHours(2);
+            Colectivo cole2 = new Colectivo("144");
+            Boleto boleto2 = cole2.PagarCon(tarjeta, tiempo2);
+
+            Assert.IsFalse(boleto2.EsTransbordo);
+            Assert.AreEqual(1580, boleto2.ImportePagado);
+        }
+
+        [Test]
+        public void PagarCon_MedioBoleto_PuedeTrasbordar()
+        {
+            TarjetaMedioBoleto medio = new TarjetaMedioBoleto();
+            medio.CargarSaldo(5000);
+
+            DateTime tiempo1 = new DateTime(2024, 11, 20, 10, 0, 0);
+            Colectivo cole1 = new Colectivo("120");
+            Boleto b1 = cole1.PagarCon(medio, tiempo1);
+
+            DateTime tiempo2 = tiempo1.AddMinutes(30);
+            Colectivo cole2 = new Colectivo("144");
+            Boleto b2 = cole2.PagarCon(medio, tiempo2);
+
+            Assert.IsTrue(b2.EsTransbordo);
+            Assert.AreEqual(0, b2.ImportePagado);
+        }
+
+        [Test]
+        public void PagarCon_BoletoGratuito_PuedeTrasbordar()
+        {
+            TarjetaBoletoGratuito gratuito = new TarjetaBoletoGratuito();
+
+            DateTime tiempo1 = new DateTime(2024, 11, 20, 10, 0, 0);
+            Colectivo cole1 = new Colectivo("K");
+            Boleto b1 = cole1.PagarCon(gratuito, tiempo1);
+
+            DateTime tiempo2 = tiempo1.AddMinutes(30);
+            Colectivo cole2 = new Colectivo("G");
+            Boleto b2 = cole2.PagarCon(gratuito, tiempo2);
+
+            Assert.IsTrue(b2.EsTransbordo);
+        }
+
+        [Test]
+        public void PagarCon_FranquiciaCompleta_PuedeTrasbordar()
+        {
+            TarjetaFranquiciaCompleta franquicia = new TarjetaFranquiciaCompleta();
+
+            DateTime tiempo1 = new DateTime(2024, 11, 20, 10, 0, 0);
+            Colectivo cole1 = new Colectivo("102");
+            Boleto b1 = cole1.PagarCon(franquicia, tiempo1);
+
+            DateTime tiempo2 = tiempo1.AddMinutes(30);
+            Colectivo cole2 = new Colectivo("144");
+            Boleto b2 = cole2.PagarCon(franquicia, tiempo2);
+
+            Assert.IsTrue(b2.EsTransbordo);
         }
     }
 }
