@@ -83,5 +83,40 @@ namespace TarjetaSube.Tests
             Boleto boleto = new Boleto("27", 1580, 0);
             Assert.AreEqual(0, boleto.SaldoRestante);
         }
+
+        [Test]
+        public void Constructor_ConSaldoNegativo_FuncionaBien()
+        {
+            Boleto boleto = new Boleto("K", 1580, -500);
+            Assert.AreEqual(-500, boleto.SaldoRestante);
+        }
+
+        [Test]
+        public void Constructor_ConImporteCero_FuncionaBien()
+        {
+            Boleto boleto = new Boleto("102", 0, 5000);
+            Assert.AreEqual(0, boleto.ImportePagado);
+        }
+
+        [Test]
+        public void Constructor_ConLineaVacia_FuncionaBien()
+        {
+            Boleto boleto = new Boleto("", 1580, 3000);
+            Assert.AreEqual("", boleto.LineaColectivo);
+        }
+
+        [Test]
+        public void Boleto_PropiedadesNoModificables()
+        {
+            Boleto boleto = new Boleto("144", 1580, 5000);
+            string linea = boleto.LineaColectivo;
+            decimal importe = boleto.ImportePagado;
+            decimal saldo = boleto.SaldoRestante;
+            DateTime fecha = boleto.FechaHora;
+
+            Assert.IsNotNull(linea);
+            Assert.Greater(importe, -1);
+            Assert.IsNotNull(fecha);
+        }
     }
 }

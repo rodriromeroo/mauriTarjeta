@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="dc5099ec-27e6-4081-93cc-267e2056d3b0" name="Malala@LALI 2025-11-03 19:27:47" runUser="Lali\Malala" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-03T19:27:47.1479105-03:00" queuing="2025-11-03T19:27:47.1479112-03:00" start="2025-11-03T19:27:45.3860959-03:00" finish="2025-11-03T19:27:47.4058312-03:00" />
+  <TestSettings name="default" id="51387c5f-47cf-4442-b31a-79d753bf3f19">
+    <Deployment runDeploymentRoot="Malala_LALI_2025-11-03_19_27_47" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="f13cc09a-4e4c-4f66-94b8-398221031472" testId="53df61a1-7cc9-bea1-563e-9ad9f57c2a5c" testName="CalcularDescuento_DevuelveMitad" computerName="LALI" duration="00:00:00.0002940" startTime="2025-11-03T19:27:47.0295384-03:00" endTime="2025-11-03T19:27:47.0298333-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f13cc09a-4e4c-4f66-94b8-398221031472" />
+    <UnitTestResult executionId="d48b841e-fce1-4357-ab69-ca8a3790eccc" testId="7e20dac4-cd85-c4b8-1612-b63b9646a8d0" testName="PagarCon_ImportePagadoEsMitad" computerName="LALI" duration="00:00:00.0001920" startTime="2025-11-03T19:27:47.0305831-03:00" endTime="2025-11-03T19:27:47.0307748-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d48b841e-fce1-4357-ab69-ca8a3790eccc" />
+    <UnitTestResult executionId="33084ac4-f772-4497-9676-52b8a5b5ba6f" testId="8044f714-cd97-d0d7-12e7-4f67427f5d47" testName="PagarCon_SinSaldo_UsaSaldoNegativo" computerName="LALI" duration="00:00:00.0001560" startTime="2025-11-03T19:27:47.0307879-03:00" endTime="2025-11-03T19:27:47.0309440-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33084ac4-f772-4497-9676-52b8a5b5ba6f" />
+    <UnitTestResult executionId="47d86be3-08e3-40f7-9c7d-da6ada0e9862" testId="12522dd0-98a3-525a-38b4-5afaeada6794" testName="CargarSaldo_MontoValido5000_RetornaTrue" computerName="LALI" duration="00:00:00.0001900" startTime="2025-11-03T19:27:47.0333519-03:00" endTime="2025-11-03T19:27:47.0335412-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47d86be3-08e3-40f7-9c7d-da6ada0e9862" />
+    <UnitTestResult executionId="d264ace0-8c2c-4ce7-b8b2-9221db03da00" testId="224edbfd-8dd7-47a2-7d7d-b8a4c6e894d3" testName="ObtenerLinea_DevuelveLineaCorrecta" computerName="LALI" duration="00:00:00.0001350" startTime="2025-11-03T19:27:47.0178340-03:00" endTime="2025-11-03T19:27:47.0179684-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d264ace0-8c2c-4ce7-b8b2-9221db03da00" />
+    <UnitTestResult executionId="8b474a89-d37e-4b29-86b6-267350e101fa" testId="efbbdaf7-c393-7127-9e0b-59fc34bf3de0" testName="DescontarSaldo_MontoExacto_DejaEnCero" computerName="LALI" duration="00:00:00.0002060" startTime="2025-11-03T19:27:47.0349506-03:00" endTime="2025-11-03T19:27:47.0351566-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b474a89-d37e-4b29-86b6-267350e101fa" />
+    <UnitTestResult executionId="30435715-e19a-4884-8889-6ccb72600d42" testId="358d45b6-3767-5187-ec57-a4520d5f0c06" testName="CalcularDescuento_ConCualquierMonto_DevuelveCero" computerName="LALI" duration="00:00:00.0002380" startTime="2025-11-03T19:27:47.0254543-03:00" endTime="2025-11-03T19:27:47.0256920-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="30435715-e19a-4884-8889-6ccb72600d42" />
+    <UnitTestResult executionId="18f43476-26ae-4239-8a2a-366c929cf725" testId="c5188c2a-c275-0fd5-5a87-1590a3da3409" testName="DescontarSaldo_PermiteHastaMenos1200_RetornaTrue" computerName="LALI" duration="00:00:00.0001920" startTime="2025-11-03T19:27:47.0353689-03:00" endTime="2025-11-03T19:27:47.0355601-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18f43476-26ae-4239-8a2a-366c929cf725" />
+    <UnitTestResult executionId="f3566443-a2e8-4c06-8d79-3185c7114399" testId="cec1b5a8-6e19-7c0d-fc75-453c9e138b8d" testName="CargarSaldo_VariasCargas_SumaCorrectamente" computerName="LALI" duration="00:00:00.0002470" startTime="2025-11-03T19:27:47.0342745-03:00" endTime="2025-11-03T19:27:47.0345209-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3566443-a2e8-4c06-8d79-3185c7114399" />
+    <UnitTestResult executionId="42aa4ded-a137-4f6e-8588-39d8b368eebd" testId="ab62c75d-6241-095c-fe03-c22352153fe6" testName="PagarCon_ConSaldoCargado_NoModificaSaldo" computerName="LALI" duration="00:00:00.0001520" startTime="2025-11-03T19:27:47.0276098-03:00" endTime="2025-11-03T19:27:47.0277620-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42aa4ded-a137-4f6e-8588-39d8b368eebd" />
+    <UnitTestResult executionId="05b95d3b-0e80-454e-8393-b7ec31afa0fd" testId="ce6a1d98-0686-5f77-7d06-db26be405b7e" testName="MedioBoletoSiempreCobraMitad" computerName="LALI" duration="00:00:00.0004140" startTime="2025-11-03T19:27:47.0388215-03:00" endTime="2025-11-03T19:27:47.0392355-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05b95d3b-0e80-454e-8393-b7ec31afa0fd" />
+    <UnitTestResult executionId="ed894632-a0f4-4d71-bccc-b9d50d9656bd" testId="1a0b396b-a7c2-ed18-0b0c-732a31b065c0" testName="PagarCon_ExcedeLimiteNegativo_DevuelveNull" computerName="LALI" duration="00:00:00.0001450" startTime="2025-11-03T19:27:47.0304263-03:00" endTime="2025-11-03T19:27:47.0305714-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed894632-a0f4-4d71-bccc-b9d50d9656bd" />
+    <UnitTestResult executionId="d4000224-2e9b-4422-bfd1-3c3855c996f6" testId="b4f44273-818a-e296-8d14-05268be7fddd" testName="CalcularDescuento_SiempreDevuelveCero" computerName="LALI" duration="00:00:00.0001240" startTime="2025-11-03T19:27:47.0266704-03:00" endTime="2025-11-03T19:27:47.0267937-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d4000224-2e9b-4422-bfd1-3c3855c996f6" />
+    <UnitTestResult executionId="a4de8577-b798-4d2e-b079-8f65b25846b0" testId="c8e3af59-9e63-137b-9369-3e09c08ad8dc" testName="PagarCon_TarjetaBoletoGratuito_NoDescuenta" computerName="LALI" duration="00:00:00.0002170" startTime="2025-11-03T19:27:47.0208586-03:00" endTime="2025-11-03T19:27:47.0210759-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4de8577-b798-4d2e-b079-8f65b25846b0" />
+    <UnitTestResult executionId="018461a1-d9ec-4856-93ba-2789cff1c8be" testId="fc7ca14c-61ac-b516-ed79-136ecb61197f" testName="Constructor_ConImporteCero_FuncionaBien" computerName="LALI" duration="00:00:00.0002670" startTime="2025-11-03T19:27:47.0043939-03:00" endTime="2025-11-03T19:27:47.0046610-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="018461a1-d9ec-4856-93ba-2789cff1c8be" />
+    <UnitTestResult executionId="379ebb41-2a48-455a-ad1b-db99952d19cc" testId="d7a13bdc-661c-7230-4d02-c5a637ad0684" testName="Constructor_AsignaImporteCorrectamente" computerName="LALI" duration="00:00:00.0090890" startTime="2025-11-03T19:27:46.9945683-03:00" endTime="2025-11-03T19:27:47.0036543-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="379ebb41-2a48-455a-ad1b-db99952d19cc" />
+    <UnitTestResult executionId="612c6059-26ab-4420-802c-71dffdd1eac1" testId="fa4eedd4-b8fa-1579-1396-2640a7889d7d" testName="CargarSaldo_MontoValido2000_RetornaTrue" computerName="LALI" duration="00:00:00.0001720" startTime="2025-11-03T19:27:47.0329735-03:00" endTime="2025-11-03T19:27:47.0331446-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="612c6059-26ab-4420-802c-71dffdd1eac1" />
+    <UnitTestResult executionId="8055f15d-f6cc-42e2-8641-ccf3e729dfd2" testId="e54c3aff-c32f-6f60-aea1-3ace7720be08" testName="BoletoGratuito_HeredaDeTarjeta" computerName="LALI" duration="00:00:00.0032500" startTime="2025-11-03T19:27:47.0221806-03:00" endTime="2025-11-03T19:27:47.0254289-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8055f15d-f6cc-42e2-8641-ccf3e729dfd2" />
+    <UnitTestResult executionId="da8dacb0-aa24-4b66-8a18-9ec78a634827" testId="feb1e319-7352-d476-a15b-ad9e775804df" testName="CalcularDescuento_ConCualquierMontoDevuelveCero" computerName="LALI" duration="00:00:00.0002350" startTime="2025-11-03T19:27:47.0264255-03:00" endTime="2025-11-03T19:27:47.0266601-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da8dacb0-aa24-4b66-8a18-9ec78a634827" />
+    <UnitTestResult executionId="9eb64cdc-f287-46ec-83be-c0f7cfe4dad0" testId="ecc5cee9-ccc3-ce39-5dd1-c891e63a86ef" testName="PropiedadSaldoRestante_EsPublica" computerName="LALI" duration="00:00:00.0001090" startTime="2025-11-03T19:27:47.0115600-03:00" endTime="2025-11-03T19:27:47.0116693-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9eb64cdc-f287-46ec-83be-c0f7cfe4dad0" />
+    <UnitTestResult executionId="a5ecaff8-79d2-4f75-8b53-52c6fbf4e3a7" testId="a7c354e7-9130-c3cd-7ce5-6cfdfb602019" testName="FranquiciaCompletaNoCubraSaldo" computerName="LALI" duration="00:00:00.0008900" startTime="2025-11-03T19:27:47.0372933-03:00" endTime="2025-11-03T19:27:47.0381821-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a5ecaff8-79d2-4f75-8b53-52c6fbf4e3a7" />
+    <UnitTestResult executionId="d3a0f7d7-95f8-4c60-863e-6ef62f03daf3" testId="11339c4d-4f37-7b19-e1f1-9da9bde1650b" testName="ObtenerLinea_ConLineaLarga_DevuelveCompleta" computerName="LALI" duration="00:00:00.0033530" startTime="2025-11-03T19:27:47.0144531-03:00" endTime="2025-11-03T19:27:47.0178038-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3a0f7d7-95f8-4c60-863e-6ef62f03daf3" />
+    <UnitTestResult executionId="10416418-6580-4f73-b5bc-d3bd40bfc278" testId="d39afc8a-dfb1-9bc5-4f55-3ee88f115634" testName="DescontarSaldo_VariosDescuentos_CalculaBien" computerName="LALI" duration="00:00:00.0002470" startTime="2025-11-03T19:27:47.0359803-03:00" endTime="2025-11-03T19:27:47.0362267-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10416418-6580-4f73-b5bc-d3bd40bfc278" />
+    <UnitTestResult executionId="67e5a06a-a19f-4d33-a09a-7c17ebd0de25" testId="413b6c7a-4725-da75-255a-40aa848f7a8e" testName="PropiedadFechaHora_EsPublica" computerName="LALI" duration="00:00:00.0001430" startTime="2025-11-03T19:27:47.0111551-03:00" endTime="2025-11-03T19:27:47.0112978-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67e5a06a-a19f-4d33-a09a-7c17ebd0de25" />
+    <UnitTestResult executionId="fcd9e122-4bab-4e51-9cc9-d400c1fb00e9" testId="36aa91e2-184d-35af-d801-6dedf1bdb66e" testName="CargarSaldo_MontoInvalido1000_RetornaFalse" computerName="LALI" duration="00:00:00.0006100" startTime="2025-11-03T19:27:47.0321137-03:00" endTime="2025-11-03T19:27:47.0327224-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fcd9e122-4bab-4e51-9cc9-d400c1fb00e9" />
+    <UnitTestResult executionId="f9c50201-c99d-490d-b462-5f0d2b875c08" testId="63b5dca8-1f82-b88b-23f1-ab42ef1f050e" testName="ObtenerSaldo_TarjetaNueva_DevuelveCero" computerName="LALI" duration="00:00:00.0001570" startTime="2025-11-03T19:27:47.0367157-03:00" endTime="2025-11-03T19:27:47.0368725-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9c50201-c99d-490d-b462-5f0d2b875c08" />
+    <UnitTestResult executionId="cfd2f04a-5d8a-4a03-889a-57a109059556" testId="70426ed5-44de-8193-d246-55c45baf5743" testName="CalcularDescuento_SiempreDevuelveCero" computerName="LALI" duration="00:00:00.0001170" startTime="2025-11-03T19:27:47.0257026-03:00" endTime="2025-11-03T19:27:47.0258190-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cfd2f04a-5d8a-4a03-889a-57a109059556" />
+    <UnitTestResult executionId="2ebaf164-03aa-4194-8069-ad9539082147" testId="f82ceef3-4c27-37d2-b3b9-fd8b5186c714" testName="CargarSaldo_DespuesDeLimiteNegativo_Recupera" computerName="LALI" duration="00:00:00.0002560" startTime="2025-11-03T19:27:47.0316211-03:00" endTime="2025-11-03T19:27:47.0318766-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ebaf164-03aa-4194-8069-ad9539082147" />
+    <UnitTestResult executionId="4d7caaef-9369-43be-a6e1-caf9f903bdf7" testId="1af488cc-bddc-3fb5-8039-4e8877d631a6" testName="DescontarSaldo_UnPesoMasDelLimite_RetornaFalse" computerName="LALI" duration="00:00:00.0001720" startTime="2025-11-03T19:27:47.0357971-03:00" endTime="2025-11-03T19:27:47.0359684-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d7caaef-9369-43be-a6e1-caf9f903bdf7" />
+    <UnitTestResult executionId="88aaac7e-b7cd-49a1-9fa8-16fda92c7a32" testId="33993155-a2a7-0caf-b866-6179e13a42fa" testName="Constructor_AsignaLineaCorrectamente" computerName="LALI" duration="00:00:00.0002799" startTime="2025-11-03T19:27:47.0036963-03:00" endTime="2025-11-03T19:27:47.0039756-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="88aaac7e-b7cd-49a1-9fa8-16fda92c7a32" />
+    <UnitTestResult executionId="53737752-3f51-418f-b87d-6ddfdd2bd1c0" testId="ddc9c606-7db5-089f-1085-e91f553a56bd" testName="MedioBoletoCobraMitadDelPasaje" computerName="LALI" duration="00:00:00.0003150" startTime="2025-11-03T19:27:47.0384930-03:00" endTime="2025-11-03T19:27:47.0388076-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="53737752-3f51-418f-b87d-6ddfdd2bd1c0" />
+    <UnitTestResult executionId="831684d7-61ac-4410-b875-79cc8c4a5c31" testId="9636d3c2-865d-d215-cd0f-baa839d73302" testName="DescontarSaldo_ViajesPlus_DescuentaCorrectamente" computerName="LALI" duration="00:00:00.0004570" startTime="2025-11-03T19:27:47.0362410-03:00" endTime="2025-11-03T19:27:47.0366966-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="831684d7-61ac-4410-b875-79cc8c4a5c31" />
+    <UnitTestResult executionId="4bfd6c34-04f5-4847-8a6e-a7a75f7c1087" testId="edcae95e-1869-b561-1aba-19b019d87ba7" testName="DescontarSaldo_NoPermiteMenosDeMenos1200_RetornaFalse" computerName="LALI" duration="00:00:00.0001880" startTime="2025-11-03T19:27:47.0351697-03:00" endTime="2025-11-03T19:27:47.0353575-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4bfd6c34-04f5-4847-8a6e-a7a75f7c1087" />
+    <UnitTestResult executionId="674b28c5-446e-41cc-99a3-aedcf179dd28" testId="1a101e32-d8e6-17fd-dda0-26a532b925ee" testName="PagarCon_TarjetaFranquiciaCompleta_SiempreGeneraBoleto" computerName="LALI" duration="00:00:00.0001820" startTime="2025-11-03T19:27:47.0212091-03:00" endTime="2025-11-03T19:27:47.0213907-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="674b28c5-446e-41cc-99a3-aedcf179dd28" />
+    <UnitTestResult executionId="f1ff1925-3538-408f-bd38-1d3e0f97a928" testId="dca565ce-0312-d530-9110-4482623250a3" testName="Constructor_ConSaldoCero_FuncionaBien" computerName="LALI" duration="00:00:00.0002640" startTime="2025-11-03T19:27:47.0049490-03:00" endTime="2025-11-03T19:27:47.0052127-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1ff1925-3538-408f-bd38-1d3e0f97a928" />
+    <UnitTestResult executionId="5a097a25-9653-4271-8be9-04b20a3e2fd7" testId="503450b3-c2e9-b3fd-f93b-f05f5393bdd3" testName="PagarCon_DescuentaSoloMitad" computerName="LALI" duration="00:00:00.0001680" startTime="2025-11-03T19:27:47.0302459-03:00" endTime="2025-11-03T19:27:47.0304142-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a097a25-9653-4271-8be9-04b20a3e2fd7" />
+    <UnitTestResult executionId="16deab4c-980b-4157-bae2-8e7d30bee29f" testId="77b1d031-3ec4-495a-0b97-1cfe0b94658c" testName="BoletoGratuitoNoCubraSaldo" computerName="LALI" duration="00:00:00.0002250" startTime="2025-11-03T19:27:47.0370546-03:00" endTime="2025-11-03T19:27:47.0372797-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16deab4c-980b-4157-bae2-8e7d30bee29f" />
+    <UnitTestResult executionId="da559c56-302d-4f4a-b4c1-7933cf5b1ee2" testId="16910bb4-04ac-57b2-52d9-6a0d642a911d" testName="PagarCon_MultiplesViajes_SiempreGeneraBoleto" computerName="LALI" duration="00:00:00.0003170" startTime="2025-11-03T19:27:47.0278943-03:00" endTime="2025-11-03T19:27:47.0282112-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da559c56-302d-4f4a-b4c1-7933cf5b1ee2" />
+    <UnitTestResult executionId="ddc35644-770b-451f-8836-50ab3793f17e" testId="70e41a4b-d79f-3ff9-6819-64822c60a414" testName="MostrarInformacion_NoLanzaExcepcion" computerName="LALI" duration="00:00:00.0056510" startTime="2025-11-03T19:27:47.0054758-03:00" endTime="2025-11-03T19:27:47.0111241-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ddc35644-770b-451f-8836-50ab3793f17e">
+      <Output>
+        <StdOut>================================&#xD;
+      BOLETO DE COLECTIVO      &#xD;
+================================&#xD;
+Línea: 144&#xD;
+Fecha: 03/11/2025&#xD;
+Hora: 19:27:47&#xD;
+Importe pagado: $1580&#xD;
+Saldo restante: $10000&#xD;
+================================</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="371c3b92-47cb-4116-9540-6aa1337c71ca" testId="a62d06f8-f67c-c5c5-b70e-adb237227c6f" testName="PagarCon_BoletoConImporteCorrecto" computerName="LALI" duration="00:00:00.0018740" startTime="2025-11-03T19:27:47.0180123-03:00" endTime="2025-11-03T19:27:47.0198861-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="371c3b92-47cb-4116-9540-6aa1337c71ca" />
+    <UnitTestResult executionId="889167ce-b6eb-4517-a5b0-1ebe41f2e1d0" testId="25ff983f-8087-d97e-9de5-1d44ad6fe4a6" testName="FranquiciaCompletaSiemprePuedePagar" computerName="LALI" duration="00:00:00.0002690" startTime="2025-11-03T19:27:47.0382094-03:00" endTime="2025-11-03T19:27:47.0384783-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="889167ce-b6eb-4517-a5b0-1ebe41f2e1d0" />
+    <UnitTestResult executionId="d2aed95d-d727-42c1-b51b-f77a6a824936" testId="4feb6e33-78d2-4005-bbb4-cd7fbe7732bf" testName="PropiedadImportePagado_EsPublica" computerName="LALI" duration="00:00:00.0001260" startTime="2025-11-03T19:27:47.0113065-03:00" endTime="2025-11-03T19:27:47.0114325-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2aed95d-d727-42c1-b51b-f77a6a824936" />
+    <UnitTestResult executionId="ecf9a4fa-bc83-404e-8834-54f56ae9156b" testId="bd1f9ea8-7739-d201-34c1-9fefdc9f5735" testName="CalcularDescuento_ConDiferentesMontosDevuelveMitad" computerName="LALI" duration="00:00:00.0007130" startTime="2025-11-03T19:27:47.0284290-03:00" endTime="2025-11-03T19:27:47.0291404-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ecf9a4fa-bc83-404e-8834-54f56ae9156b" />
+    <UnitTestResult executionId="8fb772b8-7f64-4f15-b525-351aec9d2696" testId="fafbf0fa-16ba-e938-d2dd-8fbcb850bd94" testName="CargarSaldo_SuperaLimite40000_RetornaFalse" computerName="LALI" duration="00:00:00.0002000" startTime="2025-11-03T19:27:47.0335532-03:00" endTime="2025-11-03T19:27:47.0337532-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8fb772b8-7f64-4f15-b525-351aec9d2696" />
+    <UnitTestResult executionId="8231a264-8b90-4132-b8f7-9cc1cd41f10b" testId="42961c41-4942-fa9d-9aca-95025ce739ab" testName="CargarSaldo_ExactamenteLimite40000_RetornaTrue" computerName="LALI" duration="00:00:00.0002110" startTime="2025-11-03T19:27:47.0318895-03:00" endTime="2025-11-03T19:27:47.0320997-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8231a264-8b90-4132-b8f7-9cc1cd41f10b" />
+    <UnitTestResult executionId="76fd83d2-b54f-4a4e-a410-308e9906914e" testId="3408dc29-d69a-c877-657d-87189ec1e85c" testName="PagarCon_DescontaSaldoDeTarjeta" computerName="LALI" duration="00:00:00.0001250" startTime="2025-11-03T19:27:47.0204817-03:00" endTime="2025-11-03T19:27:47.0206070-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="76fd83d2-b54f-4a4e-a410-308e9906914e" />
+    <UnitTestResult executionId="ef29c804-764e-4317-9f64-4abf0f046303" testId="ac5b0b2f-d016-b9a4-1a1a-5d977f2236e1" testName="CargarSaldo_ConSaldoNegativoMayor_DescuentaCorrectamente" computerName="LALI" duration="00:00:00.0002270" startTime="2025-11-03T19:27:47.0313814-03:00" endTime="2025-11-03T19:27:47.0316080-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef29c804-764e-4317-9f64-4abf0f046303" />
+    <UnitTestResult executionId="f30531dc-5faa-4717-93b9-a7292aa237b7" testId="1392a503-cc91-15a5-d10e-8a113488a106" testName="Constructor_AsignaFechaHora" computerName="LALI" duration="00:00:00.0013990" startTime="2025-11-03T19:27:46.9931343-03:00" endTime="2025-11-03T19:27:46.9945339-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f30531dc-5faa-4717-93b9-a7292aa237b7" />
+    <UnitTestResult executionId="66a18409-aff8-481f-85e7-9363f33e29d5" testId="a54890cf-4561-c9dd-0fd2-d0d31ce235d0" testName="Constructor_ConSaldoNegativo_FuncionaBien" computerName="LALI" duration="00:00:00.0002380" startTime="2025-11-03T19:27:47.0052301-03:00" endTime="2025-11-03T19:27:47.0054677-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66a18409-aff8-481f-85e7-9363f33e29d5" />
+    <UnitTestResult executionId="4932d090-c833-4c73-a8b0-0b3bcac34d30" testId="c0d68983-fd8d-fad2-c66a-2a1d7e0a7209" testName="FranquiciaCompleta_HeredaDeTarjeta" computerName="LALI" duration="00:00:00.0000960" startTime="2025-11-03T19:27:47.0275053-03:00" endTime="2025-11-03T19:27:47.0276016-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4932d090-c833-4c73-a8b0-0b3bcac34d30" />
+    <UnitTestResult executionId="6faa9312-5be0-4b4b-ac56-c7218fb63631" testId="1347be7f-935f-77fd-d7c4-38bd54cb4921" testName="PagarCon_ConSaldoNegativoPermitido" computerName="LALI" duration="00:00:00.0001590" startTime="2025-11-03T19:27:47.0203132-03:00" endTime="2025-11-03T19:27:47.0204724-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6faa9312-5be0-4b4b-ac56-c7218fb63631" />
+    <UnitTestResult executionId="251920ac-5748-4d7b-ac7e-ab8c46abc1fd" testId="f689bf78-e2f6-afef-8cc0-ac7c3fde89dc" testName="Boleto_PropiedadesNoModificables" computerName="LALI" duration="00:00:00.0121180" startTime="2025-11-03T19:27:46.9787888-03:00" endTime="2025-11-03T19:27:46.9907542-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="251920ac-5748-4d7b-ac7e-ab8c46abc1fd" />
+    <UnitTestResult executionId="b58b2156-c1ad-4ddd-a7e3-3198fe161606" testId="b98ef474-2764-9c62-6c3a-edc6c114b0d0" testName="PagarCon_SinCargarSaldo_GeneraBoleto" computerName="LALI" duration="00:00:00.0001170" startTime="2025-11-03T19:27:47.0260117-03:00" endTime="2025-11-03T19:27:47.0261283-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b58b2156-c1ad-4ddd-a7e3-3198fe161606" />
+    <UnitTestResult executionId="341b4be4-101d-4eda-836b-7d35ca6210fc" testId="f91d8bf5-1fcf-50bb-2fac-fdb73964e173" testName="PagarCon_ImportePagadoSiempreCero" computerName="LALI" duration="00:00:00.0001150" startTime="2025-11-03T19:27:47.0277710-03:00" endTime="2025-11-03T19:27:47.0278861-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="341b4be4-101d-4eda-836b-7d35ca6210fc" />
+    <UnitTestResult executionId="b68fb50c-b982-4a0f-9f23-8e00251aaff7" testId="a015a10c-3ee9-7ef1-5d43-57dfaaa1a1c9" testName="Constructor_ConLineaVacia_FuncionaBien" computerName="LALI" duration="00:00:00.0002210" startTime="2025-11-03T19:27:47.0047087-03:00" endTime="2025-11-03T19:27:47.0049291-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b68fb50c-b982-4a0f-9f23-8e00251aaff7" />
+    <UnitTestResult executionId="dafc7d0a-a00a-4066-97e2-1811058f2710" testId="d23a6205-9ff9-1df7-92e8-5e24fafaaf6c" testName="CargarSaldo_ConSaldoNegativo_DescuentaDeuda" computerName="LALI" duration="00:00:00.0002580" startTime="2025-11-03T19:27:47.0311088-03:00" endTime="2025-11-03T19:27:47.0313667-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dafc7d0a-a00a-4066-97e2-1811058f2710" />
+    <UnitTestResult executionId="6d52b081-0227-4b4c-9881-b030be1d3bcc" testId="6f2bd08d-db9e-b220-1e1d-e3aacd3938ab" testName="DescontarSaldo_SiempreRetornaTrue" computerName="LALI" duration="00:00:00.0004920" startTime="2025-11-03T19:27:47.0270005-03:00" endTime="2025-11-03T19:27:47.0274916-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d52b081-0227-4b4c-9881-b030be1d3bcc" />
+    <UnitTestResult executionId="77019656-0163-4806-9364-2b35e3ed2f1d" testId="62e7b0c2-345e-b791-5d8a-5ee69ab366d7" testName="PagarCon_SinSaldo_GeneraBoleto" computerName="LALI" duration="00:00:00.0000940" startTime="2025-11-03T19:27:47.0282210-03:00" endTime="2025-11-03T19:27:47.0283152-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77019656-0163-4806-9364-2b35e3ed2f1d" />
+    <UnitTestResult executionId="18b9f64e-b9a4-4c2b-baa5-a8a1f7777f28" testId="b38df0f4-0fe4-5dfb-f952-e6650865d330" testName="PagarCon_VariosViajes_NuncaDescuenta" computerName="LALI" duration="00:00:00.0001689" startTime="2025-11-03T19:27:47.0261368-03:00" endTime="2025-11-03T19:27:47.0263060-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18b9f64e-b9a4-4c2b-baa5-a8a1f7777f28" />
+    <UnitTestResult executionId="2b257f51-173b-4c3c-8b54-d9156f3163f9" testId="ab6fbee3-84d6-b380-36ed-a6eb849ababb" testName="PagarCon_ConSaldoInsuficiente_PuedeUsarHasta1200Negativo" computerName="LALI" duration="00:00:00.0002110" startTime="2025-11-03T19:27:47.0300231-03:00" endTime="2025-11-03T19:27:47.0302340-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b257f51-173b-4c3c-8b54-d9156f3163f9" />
+    <UnitTestResult executionId="79bdb186-000d-4aa9-aaae-6e631e0d82a9" testId="ce949b75-294a-e83f-8f29-ce0c8b0838df" testName="DescontarSaldo_ConSaldoSuficiente_RetornaTrue" computerName="LALI" duration="00:00:00.0002020" startTime="2025-11-03T19:27:47.0345339-03:00" endTime="2025-11-03T19:27:47.0347358-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79bdb186-000d-4aa9-aaae-6e631e0d82a9" />
+    <UnitTestResult executionId="8142105e-1a2e-40fd-b6bc-3be7c8b11ae8" testId="b5dd8978-0479-3a34-f3ed-1feda74fec18" testName="MedioBoleto_HeredaDeTarjeta" computerName="LALI" duration="00:00:00.0001340" startTime="2025-11-03T19:27:47.0298778-03:00" endTime="2025-11-03T19:27:47.0300120-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8142105e-1a2e-40fd-b6bc-3be7c8b11ae8" />
+    <UnitTestResult executionId="d42d55f4-e8b3-4ca6-b66b-7a0e9ffd059d" testId="fa5fff9d-908b-c80a-ac45-b2460cac4582" testName="CargarSaldo_TodosLosMontos_Funcionan" computerName="LALI" duration="00:00:00.0004929" startTime="2025-11-03T19:27:47.0337674-03:00" endTime="2025-11-03T19:27:47.0342601-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d42d55f4-e8b3-4ca6-b66b-7a0e9ffd059d" />
+    <UnitTestResult executionId="e169fc40-398e-42a5-b253-56986eaae032" testId="0f068246-80e1-fb0e-5b69-7becd058a3c9" testName="PagarCon_ConSaldoNegativo_SigueFuncionando" computerName="LALI" duration="00:00:00.0001700" startTime="2025-11-03T19:27:47.0258325-03:00" endTime="2025-11-03T19:27:47.0260022-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e169fc40-398e-42a5-b253-56986eaae032" />
+    <UnitTestResult executionId="826a9b15-98c4-46d2-b6da-b28165a25193" testId="96a574a9-5aae-d38a-b8b7-554a43d65ef1" testName="DescontarSaldo_EnLimiteExacto_Funciona" computerName="LALI" duration="00:00:00.0001890" startTime="2025-11-03T19:27:47.0347483-03:00" endTime="2025-11-03T19:27:47.0349372-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="826a9b15-98c4-46d2-b6da-b28165a25193" />
+    <UnitTestResult executionId="a9a456ba-339c-413a-86be-e232e077c81e" testId="8eeaf0c7-0dea-e96e-0036-4fd7c0a83d2d" testName="PagarCon_BoletoConLineaCorrecta" computerName="LALI" duration="00:00:00.0002599" startTime="2025-11-03T19:27:47.0199087-03:00" endTime="2025-11-03T19:27:47.0201685-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a9a456ba-339c-413a-86be-e232e077c81e" />
+    <UnitTestResult executionId="6f238520-99e5-4d47-9390-6ae8f53e6588" testId="89c93f0a-bbc2-cebd-91ec-63910fe26baa" testName="PagarCon_BoletoTieneLineaCorrecta" computerName="LALI" duration="00:00:00.0001260" startTime="2025-11-03T19:27:47.0201785-03:00" endTime="2025-11-03T19:27:47.0203046-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f238520-99e5-4d47-9390-6ae8f53e6588" />
+    <UnitTestResult executionId="f26f2374-0c84-4dd9-a83f-c7cf924b1046" testId="7b67e29a-4790-656f-fc9f-a1537379e9c7" testName="PagarCon_TarjetaConSaldo_DevuelveBoleto" computerName="LALI" duration="00:00:00.0001150" startTime="2025-11-03T19:27:47.0210856-03:00" endTime="2025-11-03T19:27:47.0212006-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f26f2374-0c84-4dd9-a83f-c7cf924b1046" />
+    <UnitTestResult executionId="61496b48-5259-4400-bdee-39046a86d8dd" testId="ae28fd7e-37b8-e988-fddb-ddc467c8f3d0" testName="PropiedadLineaColectivo_EsPublica" computerName="LALI" duration="00:00:00.0001110" startTime="2025-11-03T19:27:47.0114413-03:00" endTime="2025-11-03T19:27:47.0115523-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61496b48-5259-4400-bdee-39046a86d8dd" />
+    <UnitTestResult executionId="cd39c80c-77ab-40bb-a08b-9080e8114ad8" testId="49e9656b-7440-f20d-7372-ba81638dca2b" testName="PagarCon_VariasTarjetasDiferentes_FuncionaCorrectamente" computerName="LALI" duration="00:00:00.0002390" startTime="2025-11-03T19:27:47.0217972-03:00" endTime="2025-11-03T19:27:47.0220356-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd39c80c-77ab-40bb-a08b-9080e8114ad8" />
+    <UnitTestResult executionId="177ace34-90bd-4291-a74d-412532be9c97" testId="31b85b5d-a414-a25e-01fd-dbc605f36a41" testName="PagarCon_TarjetaSinSaldo_DevuelveNull" computerName="LALI" duration="00:00:00.0000830" startTime="2025-11-03T19:27:47.0217065-03:00" endTime="2025-11-03T19:27:47.0217896-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="177ace34-90bd-4291-a74d-412532be9c97" />
+    <UnitTestResult executionId="69669a9c-6ba6-4147-b31f-7c724f9fb273" testId="23077264-3c3e-3f0b-8a2c-1254d0312ed5" testName="CargarSaldo_MontoValido30000_RetornaTrue" computerName="LALI" duration="00:00:00.0001820" startTime="2025-11-03T19:27:47.0331579-03:00" endTime="2025-11-03T19:27:47.0333395-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69669a9c-6ba6-4147-b31f-7c724f9fb273" />
+    <UnitTestResult executionId="dd144257-2860-4b9f-8c6c-130a861304af" testId="ebd839d0-fee2-f6d5-ac5c-eaf44b0dcb12" testName="Constructor_AsignaSaldoRestanteCorrectamente" computerName="LALI" duration="00:00:00.0003800" startTime="2025-11-03T19:27:47.0039950-03:00" endTime="2025-11-03T19:27:47.0043751-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd144257-2860-4b9f-8c6c-130a861304af" />
+    <UnitTestResult executionId="78ee9b06-89e9-4c23-822d-a2a541e34024" testId="a13fb6b9-ac32-50c7-7be2-a7df91972b7d" testName="DescontarSaldo_NoModificaSaldo" computerName="LALI" duration="00:00:00.0001880" startTime="2025-11-03T19:27:47.0268030-03:00" endTime="2025-11-03T19:27:47.0269907-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="78ee9b06-89e9-4c23-822d-a2a541e34024" />
+    <UnitTestResult executionId="e6011fb0-87da-4d64-a5c8-87f6f6cb2308" testId="5ae5a7b8-657b-fc94-3d34-f54b96f943a0" testName="PagarCon_TarjetaMedioBoleto_DescuentaMitad" computerName="LALI" duration="00:00:00.0002970" startTime="2025-11-03T19:27:47.0213995-03:00" endTime="2025-11-03T19:27:47.0216966-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6011fb0-87da-4d64-a5c8-87f6f6cb2308" />
+    <UnitTestResult executionId="c073c743-0f93-40f0-857f-dde6237ddd6d" testId="06f67611-9f02-44e4-21b0-51c1ffb793b6" testName="PagarCon_ExcedeLimiteNegativo_DevuelveNull" computerName="LALI" duration="00:00:00.0002340" startTime="2025-11-03T19:27:47.0206155-03:00" endTime="2025-11-03T19:27:47.0208488-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c073c743-0f93-40f0-857f-dde6237ddd6d" />
+    <UnitTestResult executionId="a72cdab9-d726-4dd0-8f6e-e9ac3bb1d975" testId="2a908e3a-3c8a-15fb-5b5b-e745b2f0376e" testName="CargarSaldo_MontoInvalido7000_RetornaFalse" computerName="LALI" duration="00:00:00.0002170" startTime="2025-11-03T19:27:47.0327438-03:00" endTime="2025-11-03T19:27:47.0329600-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a72cdab9-d726-4dd0-8f6e-e9ac3bb1d975" />
+    <UnitTestResult executionId="e0566242-952b-43ed-9ed7-d00ee006a548" testId="1bd7f09f-c3e2-a26b-0892-6bfce0f3154e" testName="DescontarSaldo_PuedeUsarSaldoNegativo" computerName="LALI" duration="00:00:00.0002130" startTime="2025-11-03T19:27:47.0355727-03:00" endTime="2025-11-03T19:27:47.0357855-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e0566242-952b-43ed-9ed7-d00ee006a548" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="ObtenerLinea_ConLineaLarga_DevuelveCompleta" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="11339c4d-4f37-7b19-e1f1-9da9bde1650b">
+      <Execution id="d3a0f7d7-95f8-4c60-863e-6ef62f03daf3" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="ObtenerLinea_ConLineaLarga_DevuelveCompleta" />
+    </UnitTest>
+    <UnitTest name="CalcularDescuento_ConCualquierMonto_DevuelveCero" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="358d45b6-3767-5187-ec57-a4520d5f0c06">
+      <Execution id="30435715-e19a-4884-8889-6ccb72600d42" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaBoletoGratuitoTests" name="CalcularDescuento_ConCualquierMonto_DevuelveCero" />
+    </UnitTest>
+    <UnitTest name="Constructor_ConImporteCero_FuncionaBien" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="fc7ca14c-61ac-b516-ed79-136ecb61197f">
+      <Execution id="018461a1-d9ec-4856-93ba-2789cff1c8be" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="Constructor_ConImporteCero_FuncionaBien" />
+    </UnitTest>
+    <UnitTest name="FranquiciaCompletaNoCubraSaldo" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="a7c354e7-9130-c3cd-7ce5-6cfdfb602019">
+      <Execution id="a5ecaff8-79d2-4f75-8b53-52c6fbf4e3a7" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSubeTest.FranquiciaTest" name="FranquiciaCompletaNoCubraSaldo" />
+    </UnitTest>
+    <UnitTest name="Constructor_ConSaldoCero_FuncionaBien" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="dca565ce-0312-d530-9110-4482623250a3">
+      <Execution id="f1ff1925-3538-408f-bd38-1d3e0f97a928" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="Constructor_ConSaldoCero_FuncionaBien" />
+    </UnitTest>
+    <UnitTest name="PropiedadImportePagado_EsPublica" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="4feb6e33-78d2-4005-bbb4-cd7fbe7732bf">
+      <Execution id="d2aed95d-d727-42c1-b51b-f77a6a824936" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="PropiedadImportePagado_EsPublica" />
+    </UnitTest>
+    <UnitTest name="PagarCon_ImportePagadoSiempreCero" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="f91d8bf5-1fcf-50bb-2fac-fdb73964e173">
+      <Execution id="341b4be4-101d-4eda-836b-7d35ca6210fc" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaFranquiciaCompletaTests" name="PagarCon_ImportePagadoSiempreCero" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_MontoValido30000_RetornaTrue" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="23077264-3c3e-3f0b-8a2c-1254d0312ed5">
+      <Execution id="69669a9c-6ba6-4147-b31f-7c724f9fb273" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_MontoValido30000_RetornaTrue" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_ExactamenteLimite40000_RetornaTrue" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="42961c41-4942-fa9d-9aca-95025ce739ab">
+      <Execution id="8231a264-8b90-4132-b8f7-9cc1cd41f10b" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_ExactamenteLimite40000_RetornaTrue" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_MontoExacto_DejaEnCero" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="efbbdaf7-c393-7127-9e0b-59fc34bf3de0">
+      <Execution id="8b474a89-d37e-4b29-86b6-267350e101fa" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="DescontarSaldo_MontoExacto_DejaEnCero" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_SuperaLimite40000_RetornaFalse" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="fafbf0fa-16ba-e938-d2dd-8fbcb850bd94">
+      <Execution id="8fb772b8-7f64-4f15-b525-351aec9d2696" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_SuperaLimite40000_RetornaFalse" />
+    </UnitTest>
+    <UnitTest name="CalcularDescuento_ConCualquierMontoDevuelveCero" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="feb1e319-7352-d476-a15b-ad9e775804df">
+      <Execution id="da8dacb0-aa24-4b66-8a18-9ec78a634827" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaFranquiciaCompletaTests" name="CalcularDescuento_ConCualquierMontoDevuelveCero" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_EnLimiteExacto_Funciona" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="96a574a9-5aae-d38a-b8b7-554a43d65ef1">
+      <Execution id="826a9b15-98c4-46d2-b6da-b28165a25193" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="DescontarSaldo_EnLimiteExacto_Funciona" />
+    </UnitTest>
+    <UnitTest name="PagarCon_SinCargarSaldo_GeneraBoleto" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="b98ef474-2764-9c62-6c3a-edc6c114b0d0">
+      <Execution id="b58b2156-c1ad-4ddd-a7e3-3198fe161606" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaBoletoGratuitoTests" name="PagarCon_SinCargarSaldo_GeneraBoleto" />
+    </UnitTest>
+    <UnitTest name="PagarCon_DescontaSaldoDeTarjeta" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="3408dc29-d69a-c877-657d-87189ec1e85c">
+      <Execution id="76fd83d2-b54f-4a4e-a410-308e9906914e" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_DescontaSaldoDeTarjeta" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_ViajesPlus_DescuentaCorrectamente" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="9636d3c2-865d-d215-cd0f-baa839d73302">
+      <Execution id="831684d7-61ac-4410-b875-79cc8c4a5c31" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="DescontarSaldo_ViajesPlus_DescuentaCorrectamente" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_UnPesoMasDelLimite_RetornaFalse" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="1af488cc-bddc-3fb5-8039-4e8877d631a6">
+      <Execution id="4d7caaef-9369-43be-a6e1-caf9f903bdf7" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="DescontarSaldo_UnPesoMasDelLimite_RetornaFalse" />
+    </UnitTest>
+    <UnitTest name="ObtenerSaldo_TarjetaNueva_DevuelveCero" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="63b5dca8-1f82-b88b-23f1-ab42ef1f050e">
+      <Execution id="f9c50201-c99d-490d-b462-5f0d2b875c08" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="ObtenerSaldo_TarjetaNueva_DevuelveCero" />
+    </UnitTest>
+    <UnitTest name="MedioBoleto_HeredaDeTarjeta" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="b5dd8978-0479-3a34-f3ed-1feda74fec18">
+      <Execution id="8142105e-1a2e-40fd-b6bc-3be7c8b11ae8" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaMedioBoletoTests" name="MedioBoleto_HeredaDeTarjeta" />
+    </UnitTest>
+    <UnitTest name="PagarCon_VariosViajes_NuncaDescuenta" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="b38df0f4-0fe4-5dfb-f952-e6650865d330">
+      <Execution id="18b9f64e-b9a4-4c2b-baa5-a8a1f7777f28" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaBoletoGratuitoTests" name="PagarCon_VariosViajes_NuncaDescuenta" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_VariasCargas_SumaCorrectamente" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="cec1b5a8-6e19-7c0d-fc75-453c9e138b8d">
+      <Execution id="f3566443-a2e8-4c06-8d79-3185c7114399" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_VariasCargas_SumaCorrectamente" />
+    </UnitTest>
+    <UnitTest name="PagarCon_ConSaldoInsuficiente_PuedeUsarHasta1200Negativo" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="ab6fbee3-84d6-b380-36ed-a6eb849ababb">
+      <Execution id="2b257f51-173b-4c3c-8b54-d9156f3163f9" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaMedioBoletoTests" name="PagarCon_ConSaldoInsuficiente_PuedeUsarHasta1200Negativo" />
+    </UnitTest>
+    <UnitTest name="PagarCon_SinSaldo_UsaSaldoNegativo" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="8044f714-cd97-d0d7-12e7-4f67427f5d47">
+      <Execution id="33084ac4-f772-4497-9676-52b8a5b5ba6f" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaMedioBoletoTests" name="PagarCon_SinSaldo_UsaSaldoNegativo" />
+    </UnitTest>
+    <UnitTest name="PagarCon_ExcedeLimiteNegativo_DevuelveNull" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="1a0b396b-a7c2-ed18-0b0c-732a31b065c0">
+      <Execution id="ed894632-a0f4-4d71-bccc-b9d50d9656bd" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaMedioBoletoTests" name="PagarCon_ExcedeLimiteNegativo_DevuelveNull" />
+    </UnitTest>
+    <UnitTest name="Constructor_AsignaImporteCorrectamente" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="d7a13bdc-661c-7230-4d02-c5a637ad0684">
+      <Execution id="379ebb41-2a48-455a-ad1b-db99952d19cc" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="Constructor_AsignaImporteCorrectamente" />
+    </UnitTest>
+    <UnitTest name="PropiedadSaldoRestante_EsPublica" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="ecc5cee9-ccc3-ce39-5dd1-c891e63a86ef">
+      <Execution id="9eb64cdc-f287-46ec-83be-c0f7cfe4dad0" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="PropiedadSaldoRestante_EsPublica" />
+    </UnitTest>
+    <UnitTest name="PagarCon_SinSaldo_GeneraBoleto" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="62e7b0c2-345e-b791-5d8a-5ee69ab366d7">
+      <Execution id="77019656-0163-4806-9364-2b35e3ed2f1d" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaFranquiciaCompletaTests" name="PagarCon_SinSaldo_GeneraBoleto" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_PuedeUsarSaldoNegativo" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="1bd7f09f-c3e2-a26b-0892-6bfce0f3154e">
+      <Execution id="e0566242-952b-43ed-9ed7-d00ee006a548" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="DescontarSaldo_PuedeUsarSaldoNegativo" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_MontoValido5000_RetornaTrue" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="12522dd0-98a3-525a-38b4-5afaeada6794">
+      <Execution id="47d86be3-08e3-40f7-9c7d-da6ada0e9862" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_MontoValido5000_RetornaTrue" />
+    </UnitTest>
+    <UnitTest name="PagarCon_VariasTarjetasDiferentes_FuncionaCorrectamente" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="49e9656b-7440-f20d-7372-ba81638dca2b">
+      <Execution id="cd39c80c-77ab-40bb-a08b-9080e8114ad8" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_VariasTarjetasDiferentes_FuncionaCorrectamente" />
+    </UnitTest>
+    <UnitTest name="BoletoGratuitoNoCubraSaldo" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="77b1d031-3ec4-495a-0b97-1cfe0b94658c">
+      <Execution id="16deab4c-980b-4157-bae2-8e7d30bee29f" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSubeTest.FranquiciaTest" name="BoletoGratuitoNoCubraSaldo" />
+    </UnitTest>
+    <UnitTest name="CalcularDescuento_DevuelveMitad" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="53df61a1-7cc9-bea1-563e-9ad9f57c2a5c">
+      <Execution id="f13cc09a-4e4c-4f66-94b8-398221031472" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaMedioBoletoTests" name="CalcularDescuento_DevuelveMitad" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_MontoInvalido1000_RetornaFalse" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="36aa91e2-184d-35af-d801-6dedf1bdb66e">
+      <Execution id="fcd9e122-4bab-4e51-9cc9-d400c1fb00e9" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_MontoInvalido1000_RetornaFalse" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_ConSaldoNegativo_DescuentaDeuda" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="d23a6205-9ff9-1df7-92e8-5e24fafaaf6c">
+      <Execution id="dafc7d0a-a00a-4066-97e2-1811058f2710" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_ConSaldoNegativo_DescuentaDeuda" />
+    </UnitTest>
+    <UnitTest name="FranquiciaCompletaSiemprePuedePagar" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="25ff983f-8087-d97e-9de5-1d44ad6fe4a6">
+      <Execution id="889167ce-b6eb-4517-a5b0-1ebe41f2e1d0" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSubeTest.FranquiciaTest" name="FranquiciaCompletaSiemprePuedePagar" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_MontoInvalido7000_RetornaFalse" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="2a908e3a-3c8a-15fb-5b5b-e745b2f0376e">
+      <Execution id="a72cdab9-d726-4dd0-8f6e-e9ac3bb1d975" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_MontoInvalido7000_RetornaFalse" />
+    </UnitTest>
+    <UnitTest name="BoletoGratuito_HeredaDeTarjeta" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="e54c3aff-c32f-6f60-aea1-3ace7720be08">
+      <Execution id="8055f15d-f6cc-42e2-8641-ccf3e729dfd2" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaBoletoGratuitoTests" name="BoletoGratuito_HeredaDeTarjeta" />
+    </UnitTest>
+    <UnitTest name="CalcularDescuento_SiempreDevuelveCero" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="70426ed5-44de-8193-d246-55c45baf5743">
+      <Execution id="cfd2f04a-5d8a-4a03-889a-57a109059556" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaBoletoGratuitoTests" name="CalcularDescuento_SiempreDevuelveCero" />
+    </UnitTest>
+    <UnitTest name="PagarCon_TarjetaConSaldo_DevuelveBoleto" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="7b67e29a-4790-656f-fc9f-a1537379e9c7">
+      <Execution id="f26f2374-0c84-4dd9-a83f-c7cf924b1046" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_TarjetaConSaldo_DevuelveBoleto" />
+    </UnitTest>
+    <UnitTest name="CalcularDescuento_SiempreDevuelveCero" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="b4f44273-818a-e296-8d14-05268be7fddd">
+      <Execution id="d4000224-2e9b-4422-bfd1-3c3855c996f6" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaFranquiciaCompletaTests" name="CalcularDescuento_SiempreDevuelveCero" />
+    </UnitTest>
+    <UnitTest name="Constructor_AsignaFechaHora" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="1392a503-cc91-15a5-d10e-8a113488a106">
+      <Execution id="f30531dc-5faa-4717-93b9-a7292aa237b7" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="Constructor_AsignaFechaHora" />
+    </UnitTest>
+    <UnitTest name="PagarCon_DescuentaSoloMitad" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="503450b3-c2e9-b3fd-f93b-f05f5393bdd3">
+      <Execution id="5a097a25-9653-4271-8be9-04b20a3e2fd7" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaMedioBoletoTests" name="PagarCon_DescuentaSoloMitad" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_VariosDescuentos_CalculaBien" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="d39afc8a-dfb1-9bc5-4f55-3ee88f115634">
+      <Execution id="10416418-6580-4f73-b5bc-d3bd40bfc278" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="DescontarSaldo_VariosDescuentos_CalculaBien" />
+    </UnitTest>
+    <UnitTest name="Constructor_ConSaldoNegativo_FuncionaBien" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="a54890cf-4561-c9dd-0fd2-d0d31ce235d0">
+      <Execution id="66a18409-aff8-481f-85e7-9363f33e29d5" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="Constructor_ConSaldoNegativo_FuncionaBien" />
+    </UnitTest>
+    <UnitTest name="PagarCon_BoletoTieneLineaCorrecta" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="89c93f0a-bbc2-cebd-91ec-63910fe26baa">
+      <Execution id="6f238520-99e5-4d47-9390-6ae8f53e6588" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_BoletoTieneLineaCorrecta" />
+    </UnitTest>
+    <UnitTest name="PropiedadFechaHora_EsPublica" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="413b6c7a-4725-da75-255a-40aa848f7a8e">
+      <Execution id="67e5a06a-a19f-4d33-a09a-7c17ebd0de25" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="PropiedadFechaHora_EsPublica" />
+    </UnitTest>
+    <UnitTest name="Constructor_ConLineaVacia_FuncionaBien" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="a015a10c-3ee9-7ef1-5d43-57dfaaa1a1c9">
+      <Execution id="b68fb50c-b982-4a0f-9f23-8e00251aaff7" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="Constructor_ConLineaVacia_FuncionaBien" />
+    </UnitTest>
+    <UnitTest name="ObtenerLinea_DevuelveLineaCorrecta" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="224edbfd-8dd7-47a2-7d7d-b8a4c6e894d3">
+      <Execution id="d264ace0-8c2c-4ce7-b8b2-9221db03da00" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="ObtenerLinea_DevuelveLineaCorrecta" />
+    </UnitTest>
+    <UnitTest name="MedioBoletoSiempreCobraMitad" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="ce6a1d98-0686-5f77-7d06-db26be405b7e">
+      <Execution id="05b95d3b-0e80-454e-8393-b7ec31afa0fd" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSubeTest.FranquiciaTest" name="MedioBoletoSiempreCobraMitad" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_NoModificaSaldo" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="a13fb6b9-ac32-50c7-7be2-a7df91972b7d">
+      <Execution id="78ee9b06-89e9-4c23-822d-a2a541e34024" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaFranquiciaCompletaTests" name="DescontarSaldo_NoModificaSaldo" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_DespuesDeLimiteNegativo_Recupera" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="f82ceef3-4c27-37d2-b3b9-fd8b5186c714">
+      <Execution id="2ebaf164-03aa-4194-8069-ad9539082147" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_DespuesDeLimiteNegativo_Recupera" />
+    </UnitTest>
+    <UnitTest name="FranquiciaCompleta_HeredaDeTarjeta" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="c0d68983-fd8d-fad2-c66a-2a1d7e0a7209">
+      <Execution id="4932d090-c833-4c73-a8b0-0b3bcac34d30" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaFranquiciaCompletaTests" name="FranquiciaCompleta_HeredaDeTarjeta" />
+    </UnitTest>
+    <UnitTest name="PagarCon_TarjetaMedioBoleto_DescuentaMitad" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="5ae5a7b8-657b-fc94-3d34-f54b96f943a0">
+      <Execution id="e6011fb0-87da-4d64-a5c8-87f6f6cb2308" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_TarjetaMedioBoleto_DescuentaMitad" />
+    </UnitTest>
+    <UnitTest name="MostrarInformacion_NoLanzaExcepcion" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="70e41a4b-d79f-3ff9-6819-64822c60a414">
+      <Execution id="ddc35644-770b-451f-8836-50ab3793f17e" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="MostrarInformacion_NoLanzaExcepcion" />
+    </UnitTest>
+    <UnitTest name="Constructor_AsignaSaldoRestanteCorrectamente" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="ebd839d0-fee2-f6d5-ac5c-eaf44b0dcb12">
+      <Execution id="dd144257-2860-4b9f-8c6c-130a861304af" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="Constructor_AsignaSaldoRestanteCorrectamente" />
+    </UnitTest>
+    <UnitTest name="PagarCon_ConSaldoNegativoPermitido" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="1347be7f-935f-77fd-d7c4-38bd54cb4921">
+      <Execution id="6faa9312-5be0-4b4b-ac56-c7218fb63631" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_ConSaldoNegativoPermitido" />
+    </UnitTest>
+    <UnitTest name="PagarCon_BoletoConImporteCorrecto" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="a62d06f8-f67c-c5c5-b70e-adb237227c6f">
+      <Execution id="371c3b92-47cb-4116-9540-6aa1337c71ca" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_BoletoConImporteCorrecto" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_MontoValido2000_RetornaTrue" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="fa4eedd4-b8fa-1579-1396-2640a7889d7d">
+      <Execution id="612c6059-26ab-4420-802c-71dffdd1eac1" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_MontoValido2000_RetornaTrue" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_NoPermiteMenosDeMenos1200_RetornaFalse" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="edcae95e-1869-b561-1aba-19b019d87ba7">
+      <Execution id="4bfd6c34-04f5-4847-8a6e-a7a75f7c1087" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="DescontarSaldo_NoPermiteMenosDeMenos1200_RetornaFalse" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_TodosLosMontos_Funcionan" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="fa5fff9d-908b-c80a-ac45-b2460cac4582">
+      <Execution id="d42d55f4-e8b3-4ca6-b66b-7a0e9ffd059d" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_TodosLosMontos_Funcionan" />
+    </UnitTest>
+    <UnitTest name="CalcularDescuento_ConDiferentesMontosDevuelveMitad" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="bd1f9ea8-7739-d201-34c1-9fefdc9f5735">
+      <Execution id="ecf9a4fa-bc83-404e-8834-54f56ae9156b" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaMedioBoletoTests" name="CalcularDescuento_ConDiferentesMontosDevuelveMitad" />
+    </UnitTest>
+    <UnitTest name="PagarCon_TarjetaSinSaldo_DevuelveNull" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="31b85b5d-a414-a25e-01fd-dbc605f36a41">
+      <Execution id="177ace34-90bd-4291-a74d-412532be9c97" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_TarjetaSinSaldo_DevuelveNull" />
+    </UnitTest>
+    <UnitTest name="PagarCon_MultiplesViajes_SiempreGeneraBoleto" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="16910bb4-04ac-57b2-52d9-6a0d642a911d">
+      <Execution id="da559c56-302d-4f4a-b4c1-7933cf5b1ee2" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaFranquiciaCompletaTests" name="PagarCon_MultiplesViajes_SiempreGeneraBoleto" />
+    </UnitTest>
+    <UnitTest name="CargarSaldo_ConSaldoNegativoMayor_DescuentaCorrectamente" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="ac5b0b2f-d016-b9a4-1a1a-5d977f2236e1">
+      <Execution id="ef29c804-764e-4317-9f64-4abf0f046303" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="CargarSaldo_ConSaldoNegativoMayor_DescuentaCorrectamente" />
+    </UnitTest>
+    <UnitTest name="PagarCon_ImportePagadoEsMitad" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="7e20dac4-cd85-c4b8-1612-b63b9646a8d0">
+      <Execution id="d48b841e-fce1-4357-ab69-ca8a3790eccc" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaMedioBoletoTests" name="PagarCon_ImportePagadoEsMitad" />
+    </UnitTest>
+    <UnitTest name="PagarCon_ExcedeLimiteNegativo_DevuelveNull" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="06f67611-9f02-44e4-21b0-51c1ffb793b6">
+      <Execution id="c073c743-0f93-40f0-857f-dde6237ddd6d" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_ExcedeLimiteNegativo_DevuelveNull" />
+    </UnitTest>
+    <UnitTest name="PagarCon_TarjetaFranquiciaCompleta_SiempreGeneraBoleto" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="1a101e32-d8e6-17fd-dda0-26a532b925ee">
+      <Execution id="674b28c5-446e-41cc-99a3-aedcf179dd28" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_TarjetaFranquiciaCompleta_SiempreGeneraBoleto" />
+    </UnitTest>
+    <UnitTest name="PagarCon_ConSaldoCargado_NoModificaSaldo" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="ab62c75d-6241-095c-fe03-c22352153fe6">
+      <Execution id="42aa4ded-a137-4f6e-8588-39d8b368eebd" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaFranquiciaCompletaTests" name="PagarCon_ConSaldoCargado_NoModificaSaldo" />
+    </UnitTest>
+    <UnitTest name="PagarCon_ConSaldoNegativo_SigueFuncionando" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="0f068246-80e1-fb0e-5b69-7becd058a3c9">
+      <Execution id="e169fc40-398e-42a5-b253-56986eaae032" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaBoletoGratuitoTests" name="PagarCon_ConSaldoNegativo_SigueFuncionando" />
+    </UnitTest>
+    <UnitTest name="Constructor_AsignaLineaCorrectamente" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="33993155-a2a7-0caf-b866-6179e13a42fa">
+      <Execution id="88aaac7e-b7cd-49a1-9fa8-16fda92c7a32" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="Constructor_AsignaLineaCorrectamente" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_PermiteHastaMenos1200_RetornaTrue" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="c5188c2a-c275-0fd5-5a87-1590a3da3409">
+      <Execution id="18f43476-26ae-4239-8a2a-366c929cf725" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="DescontarSaldo_PermiteHastaMenos1200_RetornaTrue" />
+    </UnitTest>
+    <UnitTest name="Boleto_PropiedadesNoModificables" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="f689bf78-e2f6-afef-8cc0-ac7c3fde89dc">
+      <Execution id="251920ac-5748-4d7b-ac7e-ab8c46abc1fd" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="Boleto_PropiedadesNoModificables" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_SiempreRetornaTrue" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="6f2bd08d-db9e-b220-1e1d-e3aacd3938ab">
+      <Execution id="6d52b081-0227-4b4c-9881-b030be1d3bcc" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaFranquiciaCompletaTests" name="DescontarSaldo_SiempreRetornaTrue" />
+    </UnitTest>
+    <UnitTest name="MedioBoletoCobraMitadDelPasaje" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="ddc9c606-7db5-089f-1085-e91f553a56bd">
+      <Execution id="53737752-3f51-418f-b87d-6ddfdd2bd1c0" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSubeTest.FranquiciaTest" name="MedioBoletoCobraMitadDelPasaje" />
+    </UnitTest>
+    <UnitTest name="PagarCon_BoletoConLineaCorrecta" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="8eeaf0c7-0dea-e96e-0036-4fd7c0a83d2d">
+      <Execution id="a9a456ba-339c-413a-86be-e232e077c81e" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_BoletoConLineaCorrecta" />
+    </UnitTest>
+    <UnitTest name="DescontarSaldo_ConSaldoSuficiente_RetornaTrue" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="ce949b75-294a-e83f-8f29-ce0c8b0838df">
+      <Execution id="79bdb186-000d-4aa9-aaae-6e631e0d82a9" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.TarjetaTests" name="DescontarSaldo_ConSaldoSuficiente_RetornaTrue" />
+    </UnitTest>
+    <UnitTest name="PagarCon_TarjetaBoletoGratuito_NoDescuenta" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="c8e3af59-9e63-137b-9369-3e09c08ad8dc">
+      <Execution id="a4de8577-b798-4d2e-b079-8f65b25846b0" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.ColectivoTests" name="PagarCon_TarjetaBoletoGratuito_NoDescuenta" />
+    </UnitTest>
+    <UnitTest name="PropiedadLineaColectivo_EsPublica" storage="c:\users\malala\downloads\archivosrodripoli\mauritarjeta\tarjetasubetest\bin\debug\net5.0\tarjetasubetest.dll" id="ae28fd7e-37b8-e988-fddb-ddc467c8f3d0">
+      <Execution id="61496b48-5259-4400-bdee-39046a86d8dd" />
+      <TestMethod codeBase="C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="TarjetaSube.Tests.BoletoTests" name="PropiedadLineaColectivo_EsPublica" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="53df61a1-7cc9-bea1-563e-9ad9f57c2a5c" executionId="f13cc09a-4e4c-4f66-94b8-398221031472" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7e20dac4-cd85-c4b8-1612-b63b9646a8d0" executionId="d48b841e-fce1-4357-ab69-ca8a3790eccc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8044f714-cd97-d0d7-12e7-4f67427f5d47" executionId="33084ac4-f772-4497-9676-52b8a5b5ba6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12522dd0-98a3-525a-38b4-5afaeada6794" executionId="47d86be3-08e3-40f7-9c7d-da6ada0e9862" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="224edbfd-8dd7-47a2-7d7d-b8a4c6e894d3" executionId="d264ace0-8c2c-4ce7-b8b2-9221db03da00" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="efbbdaf7-c393-7127-9e0b-59fc34bf3de0" executionId="8b474a89-d37e-4b29-86b6-267350e101fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="358d45b6-3767-5187-ec57-a4520d5f0c06" executionId="30435715-e19a-4884-8889-6ccb72600d42" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c5188c2a-c275-0fd5-5a87-1590a3da3409" executionId="18f43476-26ae-4239-8a2a-366c929cf725" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cec1b5a8-6e19-7c0d-fc75-453c9e138b8d" executionId="f3566443-a2e8-4c06-8d79-3185c7114399" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ab62c75d-6241-095c-fe03-c22352153fe6" executionId="42aa4ded-a137-4f6e-8588-39d8b368eebd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ce6a1d98-0686-5f77-7d06-db26be405b7e" executionId="05b95d3b-0e80-454e-8393-b7ec31afa0fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1a0b396b-a7c2-ed18-0b0c-732a31b065c0" executionId="ed894632-a0f4-4d71-bccc-b9d50d9656bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4f44273-818a-e296-8d14-05268be7fddd" executionId="d4000224-2e9b-4422-bfd1-3c3855c996f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8e3af59-9e63-137b-9369-3e09c08ad8dc" executionId="a4de8577-b798-4d2e-b079-8f65b25846b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc7ca14c-61ac-b516-ed79-136ecb61197f" executionId="018461a1-d9ec-4856-93ba-2789cff1c8be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d7a13bdc-661c-7230-4d02-c5a637ad0684" executionId="379ebb41-2a48-455a-ad1b-db99952d19cc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fa4eedd4-b8fa-1579-1396-2640a7889d7d" executionId="612c6059-26ab-4420-802c-71dffdd1eac1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e54c3aff-c32f-6f60-aea1-3ace7720be08" executionId="8055f15d-f6cc-42e2-8641-ccf3e729dfd2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="feb1e319-7352-d476-a15b-ad9e775804df" executionId="da8dacb0-aa24-4b66-8a18-9ec78a634827" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ecc5cee9-ccc3-ce39-5dd1-c891e63a86ef" executionId="9eb64cdc-f287-46ec-83be-c0f7cfe4dad0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a7c354e7-9130-c3cd-7ce5-6cfdfb602019" executionId="a5ecaff8-79d2-4f75-8b53-52c6fbf4e3a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="11339c4d-4f37-7b19-e1f1-9da9bde1650b" executionId="d3a0f7d7-95f8-4c60-863e-6ef62f03daf3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d39afc8a-dfb1-9bc5-4f55-3ee88f115634" executionId="10416418-6580-4f73-b5bc-d3bd40bfc278" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="413b6c7a-4725-da75-255a-40aa848f7a8e" executionId="67e5a06a-a19f-4d33-a09a-7c17ebd0de25" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="36aa91e2-184d-35af-d801-6dedf1bdb66e" executionId="fcd9e122-4bab-4e51-9cc9-d400c1fb00e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63b5dca8-1f82-b88b-23f1-ab42ef1f050e" executionId="f9c50201-c99d-490d-b462-5f0d2b875c08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="70426ed5-44de-8193-d246-55c45baf5743" executionId="cfd2f04a-5d8a-4a03-889a-57a109059556" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f82ceef3-4c27-37d2-b3b9-fd8b5186c714" executionId="2ebaf164-03aa-4194-8069-ad9539082147" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1af488cc-bddc-3fb5-8039-4e8877d631a6" executionId="4d7caaef-9369-43be-a6e1-caf9f903bdf7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33993155-a2a7-0caf-b866-6179e13a42fa" executionId="88aaac7e-b7cd-49a1-9fa8-16fda92c7a32" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ddc9c606-7db5-089f-1085-e91f553a56bd" executionId="53737752-3f51-418f-b87d-6ddfdd2bd1c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9636d3c2-865d-d215-cd0f-baa839d73302" executionId="831684d7-61ac-4410-b875-79cc8c4a5c31" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="edcae95e-1869-b561-1aba-19b019d87ba7" executionId="4bfd6c34-04f5-4847-8a6e-a7a75f7c1087" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1a101e32-d8e6-17fd-dda0-26a532b925ee" executionId="674b28c5-446e-41cc-99a3-aedcf179dd28" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dca565ce-0312-d530-9110-4482623250a3" executionId="f1ff1925-3538-408f-bd38-1d3e0f97a928" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="503450b3-c2e9-b3fd-f93b-f05f5393bdd3" executionId="5a097a25-9653-4271-8be9-04b20a3e2fd7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="77b1d031-3ec4-495a-0b97-1cfe0b94658c" executionId="16deab4c-980b-4157-bae2-8e7d30bee29f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="16910bb4-04ac-57b2-52d9-6a0d642a911d" executionId="da559c56-302d-4f4a-b4c1-7933cf5b1ee2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="70e41a4b-d79f-3ff9-6819-64822c60a414" executionId="ddc35644-770b-451f-8836-50ab3793f17e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a62d06f8-f67c-c5c5-b70e-adb237227c6f" executionId="371c3b92-47cb-4116-9540-6aa1337c71ca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="25ff983f-8087-d97e-9de5-1d44ad6fe4a6" executionId="889167ce-b6eb-4517-a5b0-1ebe41f2e1d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4feb6e33-78d2-4005-bbb4-cd7fbe7732bf" executionId="d2aed95d-d727-42c1-b51b-f77a6a824936" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd1f9ea8-7739-d201-34c1-9fefdc9f5735" executionId="ecf9a4fa-bc83-404e-8834-54f56ae9156b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fafbf0fa-16ba-e938-d2dd-8fbcb850bd94" executionId="8fb772b8-7f64-4f15-b525-351aec9d2696" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="42961c41-4942-fa9d-9aca-95025ce739ab" executionId="8231a264-8b90-4132-b8f7-9cc1cd41f10b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3408dc29-d69a-c877-657d-87189ec1e85c" executionId="76fd83d2-b54f-4a4e-a410-308e9906914e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ac5b0b2f-d016-b9a4-1a1a-5d977f2236e1" executionId="ef29c804-764e-4317-9f64-4abf0f046303" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1392a503-cc91-15a5-d10e-8a113488a106" executionId="f30531dc-5faa-4717-93b9-a7292aa237b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a54890cf-4561-c9dd-0fd2-d0d31ce235d0" executionId="66a18409-aff8-481f-85e7-9363f33e29d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0d68983-fd8d-fad2-c66a-2a1d7e0a7209" executionId="4932d090-c833-4c73-a8b0-0b3bcac34d30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1347be7f-935f-77fd-d7c4-38bd54cb4921" executionId="6faa9312-5be0-4b4b-ac56-c7218fb63631" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f689bf78-e2f6-afef-8cc0-ac7c3fde89dc" executionId="251920ac-5748-4d7b-ac7e-ab8c46abc1fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b98ef474-2764-9c62-6c3a-edc6c114b0d0" executionId="b58b2156-c1ad-4ddd-a7e3-3198fe161606" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f91d8bf5-1fcf-50bb-2fac-fdb73964e173" executionId="341b4be4-101d-4eda-836b-7d35ca6210fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a015a10c-3ee9-7ef1-5d43-57dfaaa1a1c9" executionId="b68fb50c-b982-4a0f-9f23-8e00251aaff7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d23a6205-9ff9-1df7-92e8-5e24fafaaf6c" executionId="dafc7d0a-a00a-4066-97e2-1811058f2710" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f2bd08d-db9e-b220-1e1d-e3aacd3938ab" executionId="6d52b081-0227-4b4c-9881-b030be1d3bcc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62e7b0c2-345e-b791-5d8a-5ee69ab366d7" executionId="77019656-0163-4806-9364-2b35e3ed2f1d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b38df0f4-0fe4-5dfb-f952-e6650865d330" executionId="18b9f64e-b9a4-4c2b-baa5-a8a1f7777f28" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ab6fbee3-84d6-b380-36ed-a6eb849ababb" executionId="2b257f51-173b-4c3c-8b54-d9156f3163f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ce949b75-294a-e83f-8f29-ce0c8b0838df" executionId="79bdb186-000d-4aa9-aaae-6e631e0d82a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b5dd8978-0479-3a34-f3ed-1feda74fec18" executionId="8142105e-1a2e-40fd-b6bc-3be7c8b11ae8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fa5fff9d-908b-c80a-ac45-b2460cac4582" executionId="d42d55f4-e8b3-4ca6-b66b-7a0e9ffd059d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f068246-80e1-fb0e-5b69-7becd058a3c9" executionId="e169fc40-398e-42a5-b253-56986eaae032" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="96a574a9-5aae-d38a-b8b7-554a43d65ef1" executionId="826a9b15-98c4-46d2-b6da-b28165a25193" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8eeaf0c7-0dea-e96e-0036-4fd7c0a83d2d" executionId="a9a456ba-339c-413a-86be-e232e077c81e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89c93f0a-bbc2-cebd-91ec-63910fe26baa" executionId="6f238520-99e5-4d47-9390-6ae8f53e6588" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7b67e29a-4790-656f-fc9f-a1537379e9c7" executionId="f26f2374-0c84-4dd9-a83f-c7cf924b1046" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae28fd7e-37b8-e988-fddb-ddc467c8f3d0" executionId="61496b48-5259-4400-bdee-39046a86d8dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="49e9656b-7440-f20d-7372-ba81638dca2b" executionId="cd39c80c-77ab-40bb-a08b-9080e8114ad8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="31b85b5d-a414-a25e-01fd-dbc605f36a41" executionId="177ace34-90bd-4291-a74d-412532be9c97" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23077264-3c3e-3f0b-8a2c-1254d0312ed5" executionId="69669a9c-6ba6-4147-b31f-7c724f9fb273" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ebd839d0-fee2-f6d5-ac5c-eaf44b0dcb12" executionId="dd144257-2860-4b9f-8c6c-130a861304af" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a13fb6b9-ac32-50c7-7be2-a7df91972b7d" executionId="78ee9b06-89e9-4c23-822d-a2a541e34024" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ae5a7b8-657b-fc94-3d34-f54b96f943a0" executionId="e6011fb0-87da-4d64-a5c8-87f6f6cb2308" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06f67611-9f02-44e4-21b0-51c1ffb793b6" executionId="c073c743-0f93-40f0-857f-dde6237ddd6d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2a908e3a-3c8a-15fb-5b5b-e745b2f0376e" executionId="a72cdab9-d726-4dd0-8f6e-e9ac3bb1d975" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1bd7f09f-c3e2-a26b-0892-6bfce0f3154e" executionId="e0566242-952b-43ed-9ed7-d00ee006a548" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="78" executed="78" passed="78" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 3.17.0.0: Test execution started&#xD;
+Running all tests in C:\Users\Malala\Downloads\archivosRodriPoli\mauriTarjeta\TarjetaSubeTest\bin\Debug\net5.0\TarjetaSubeTest.dll&#xD;
+   NUnit3TestExecutor discovered 78 of 78 NUnit test cases&#xD;
+================================&#xD;
+      BOLETO DE COLECTIVO      &#xD;
+================================&#xD;
+Línea: 144&#xD;
+Fecha: 03/11/2025&#xD;
+Hora: 19:27:47&#xD;
+Importe pagado: $1580&#xD;
+Saldo restante: $10000&#xD;
+================================&#xD;
+&#xD;
+NUnit Adapter 3.17.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+    <CollectorDataEntries>
+      <Collector agentName="LALI" uri="datacollector://microsoft/CoverletCodeCoverage/1.0" collectorDisplayName="XPlat code coverage">
+        <UriAttachments>
+          <UriAttachment>
+            <A href="LALI\coverage.cobertura.xml"></A>
+          </UriAttachment>
+        </UriAttachments>
+      </Collector>
+    </CollectorDataEntries>
+  </ResultSummary>
+</TestRun>

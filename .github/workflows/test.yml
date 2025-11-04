@@ -1,24 +1,19 @@
-name: .NET CI/CD with Code Coverage
+name: .NET 5 Build, Test and Code Coverage
 
 on:
   push:
-    branches:
-      - '**'
+    branches: [ "**" ]
   pull_request:
-    branches:
-      - '**'
+    branches: [ "**" ]
 
 jobs:
-
   build-and-test:
-
     runs-on: windows-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-   
     - name: Setup .NET 5.0
       uses: actions/setup-dotnet@v4
       with:
@@ -28,13 +23,17 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore --configuration Release
 
     - name: Run tests with coverage
-      run: dotnet test --no-build --collect:"XPlat Code Coverage"
+      run: dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage" --logger "trx"
+
+    - name: List coverage files
+      run: |
+        Get-ChildItem -Recurse -Filter "coverage.cobertura.xml"
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        files: ./**/coverage.cobertura.xml
+        file: ./TarjetaSubeTest/TestResults/*/coverage.cobertura.xml
