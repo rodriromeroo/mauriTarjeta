@@ -19,18 +19,49 @@ namespace TarjetaSube {
         public Boleto PagarCon(Tarjeta tarjeta) {
             decimal montoACobrar = valorPasaje;
             
-            // Si es franquicia completa, siempre puede pagar
+            // verifica horario para medio boleto
+            if (tarjeta is TarjetaMedioBoleto) {
+                TarjetaMedioBoleto medioBoleto = (TarjetaMedioBoleto)tarjeta;
+                
+                if (!medioBoleto.PuedeViajarEnEsteHorario()) {
+                    return null; // no puede viajar fuera de horario
+                }
+                
+                montoACobrar = medioBoleto.CalcularDescuento(valorPasaje);
+            }
+            
+            // verifica horario para boleto gratuito
+            if (tarjeta is TarjetaBoletoGratuito) {
+                TarjetaBoletoGratuito gratuito = (TarjetaBoletoGratuito)tarjeta;
+                
+                if (!gratuito.PuedeViajarEnEsteHorario()) {
+                    return null; // no puede viajar fuera de horario
+                }
+                
+                if (gratuito.PuedeViajarGratis()) {
+                    gratuito.RegistrarViajeGratuito();
+                    montoACobrar = 0;
+                } else {
+                    montoACobrar = valorPasaje; // cobra completo despues del segundo viaje
+                }
+            }
+            
+            // verifica horario para franquicia completa
             if (tarjeta is TarjetaFranquiciaCompleta) {
                 TarjetaFranquiciaCompleta franquicia = (TarjetaFranquiciaCompleta)tarjeta;
+                
+                if (!franquicia.PuedeViajarEnEsteHorario()) {
+                    return null; // no puede viajar fuera de horario
+                }
+                
                 montoACobrar = franquicia.CalcularDescuento(valorPasaje);
                 Boleto boletito = new Boleto(numeroLinea, montoACobrar, tarjeta.ObtenerSaldo());
                 return boletito;
             }
             
-            // Si es medio boleto, cobra la mitad
-            if (tarjeta is TarjetaMedioBoleto) {
-                TarjetaMedioBoleto medioBoleto = (TarjetaMedioBoleto)tarjeta;
-                montoACobrar = medioBoleto.CalcularDescuento(valorPasaje);
+            // aplica descuento de uso frecuente solo para tarjetas normales
+            if (tarjeta.GetType() == typeof(Tarjeta)) {
+                montoACobrar = tarjeta.CalcularDescuentoUsoFrecuente(valorPasaje);
             }
             
             // Si es boleto gratuito, calcula el descuento y registra el viaje
