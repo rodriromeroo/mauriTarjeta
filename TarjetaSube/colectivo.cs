@@ -33,16 +33,30 @@ namespace TarjetaSube {
                 montoACobrar = medioBoleto.CalcularDescuento(valorPasaje);
             }
             
-            // Si es boleto gratuito, no cobra nada
+            // Si es boleto gratuito, calcula el descuento y registra el viaje
             if (tarjeta is TarjetaBoletoGratuito) {
                 TarjetaBoletoGratuito gratuito = (TarjetaBoletoGratuito)tarjeta;
                 montoACobrar = gratuito.CalcularDescuento(valorPasaje);
+                
+                // Si es gratis (0), no descuenta saldo y registra el viaje
+                if (montoACobrar == 0) {
+                    gratuito.RegistrarViaje();
+                    Boleto boletoGratis = new Boleto(numeroLinea, montoACobrar, tarjeta.ObtenerSaldo());
+                    return boletoGratis;
+                }
+                // Si cobra tarifa completa, descuenta normalmente
             }
             
             // Intenta descontar el saldo
             bool pagoExitoso = tarjeta.DescontarSaldo(montoACobrar);
             
             if (pagoExitoso) {
+                // Si es boleto gratuito y pago (tercer viaje o mas), registra el viaje
+                if (tarjeta is TarjetaBoletoGratuito) {
+                    TarjetaBoletoGratuito gratuito = (TarjetaBoletoGratuito)tarjeta;
+                    gratuito.RegistrarViaje();
+                }
+                
                 Boleto boleto = new Boleto(numeroLinea, montoACobrar, tarjeta.ObtenerSaldo());
                 return boleto;
             } else {
