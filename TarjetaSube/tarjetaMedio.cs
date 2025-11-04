@@ -4,10 +4,6 @@ namespace TarjetaSube
 {
     public class TarjetaMedioBoleto : Tarjeta
     {
-        private DateTime ultimoViaje;
-        private int viajesHoy;
-        private DateTime fechaViajesHoy;
-
         public TarjetaMedioBoleto() : base()
         {
             ultimoViaje = DateTime.MinValue;
@@ -36,33 +32,11 @@ namespace TarjetaSube
             return monto / 2;
         }
 
-        public bool PuedeViajar(DateTime ahora)
+        // no cambia mucho pero nos aseguramos que funcione la acreditacion
+        public override bool DescontarSaldo(decimal monto)
         {
-            TimeSpan tiempoTranscurrido = ahora - ultimoViaje;
-
-            if (tiempoTranscurrido.TotalMinutes < 5)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        public void RegistrarViaje(DateTime ahora)
-        {
-            if (fechaViajesHoy.Date != ahora.Date)
-            {
-                viajesHoy = 0;
-                fechaViajesHoy = ahora;
-            }
-
-            ultimoViaje = ahora;
-            viajesHoy++;
-        }
-
-        public int ObtenerViajesHoy()
-        {
-            return viajesHoy;
+            bool resultado = base.DescontarSaldo(monto);
+            return resultado;
         }
     }
 }

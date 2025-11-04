@@ -8,12 +8,13 @@ namespace TarjetaSube
         protected decimal saldo;
         private List<decimal> montosPermitidos;
         private const decimal LIMITE_NEGATIVO = -1200m;
-        public string ID { get; private set; }
+        private const decimal LIMITE_MAXIMO = 56000m; // cambiia de 40000 a 56000
+        private decimal saldoPendiente; //  para saldo excedente
 
         public Tarjeta()
         {
             saldo = 0;
-            ID = Guid.NewGuid().ToString();
+            saldoPendiente = 0;
             montosPermitidos = new List<decimal> {
                 2000, 3000, 4000, 5000, 8000, 10000, 15000, 20000, 25000, 30000
             };
@@ -24,9 +25,9 @@ namespace TarjetaSube
             return saldo;
         }
 
-        public virtual string ObtenerTipo()
+        public decimal ObtenerSaldoPendiente()
         {
-            return "Normal";
+            return saldoPendiente;
         }
 
         public bool CargarSaldo(decimal monto)
@@ -36,14 +37,39 @@ namespace TarjetaSube
                 return false;
             }
 
-            decimal nuevoSaldo = saldo + monto;
-            if (nuevoSaldo > 40000)
+            // intentar acreditar saldo pendiente si existe
+            if (saldoPendiente > 0)
             {
-                return false;
+                AcreditarCarga();
+            }
+
+            decimal nuevoSaldo = saldo + monto;
+
+            // guardar excedente como pendiente
+            if (nuevoSaldo > LIMITE_MAXIMO)
+            {
+                decimal excedente = nuevoSaldo - LIMITE_MAXIMO;
+                saldo = LIMITE_MAXIMO;
+                saldoPendiente += excedente;
+                return true;
             }
 
             saldo = nuevoSaldo;
             return true;
+        }
+
+        // para acreditar saldo pendiente
+        public void AcreditarCarga()
+        {
+            if (saldoPendiente <= 0) return;
+
+            decimal espacioDisponible = LIMITE_MAXIMO - saldo;
+            if (espacioDisponible > 0)
+            {
+                decimal montoAAcreditar = Math.Min(saldoPendiente, espacioDisponible);
+                saldo += montoAAcreditar;
+                saldoPendiente -= montoAAcreditar;
+            }
         }
 
         public virtual bool DescontarSaldo(decimal monto)
@@ -56,6 +82,12 @@ namespace TarjetaSube
             }
 
             saldo = saldoResultado;
+
+            if (saldoPendiente > 0)
+            {
+                AcreditarCarga();
+            }
+
             return true;
         }
     }
