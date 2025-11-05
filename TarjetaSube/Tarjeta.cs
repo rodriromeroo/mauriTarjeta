@@ -35,7 +35,7 @@ public void RegistrarViajeParaTrasbordo(string lineaColectivo, DateTime fechaHor
     ultimaLineaViajada = lineaColectivo;
 }
 
-public bool PuedeHacerTrasbordo(DateTime fechaHora)
+public bool PuedeHacerTrasbordo(string lineaColectivo, DateTime fechaHora)
 {
     return false;
 }
