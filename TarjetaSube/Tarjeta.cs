@@ -52,6 +52,7 @@ namespace TarjetaSube
                 ultimoMesRegistrado = ahora;
             }
 
+
             return viajesDelMes;
         }
 
