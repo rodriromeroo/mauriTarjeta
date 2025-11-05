@@ -30,7 +30,15 @@ namespace TarjetaSube
             ultimoViajeParaTrasbordo = DateTime.MinValue;
             ultimaLineaViajada = "";
         }
+public void RegistrarViajeParaTrasbordo(string lineaColectivo, DateTime fechaHora)
+{
+    ultimaLineaViajada = lineaColectivo;
+}
 
+public bool PuedeHacerTrasbordo(DateTime fechaHora)
+{
+    return false;
+}
         public decimal ObtenerSaldo()
         {
             return saldo;
