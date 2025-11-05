@@ -18,13 +18,13 @@ namespace TarjetaSube
         {
             DateTime hoy = DateTime.Now.Date;
 
-            // Resetear contador si es un nuevo día
+            // Resetear contador si es un nuevo dÃ­a
             if (ultimaFechaViaje.Date != hoy)
             {
                 viajesGratuitosHoy = 0;
             }
 
-            // Si ya usó los 2 viajes gratuitos del día, cobra precio completo
+            // Si ya usÃ³ los 2 viajes gratuitos del dÃ­a, cobra precio completo
             if (viajesGratuitosHoy >= MAX_VIAJES_GRATUITOS_DIA)
             {
                 return monto;
@@ -46,11 +46,30 @@ namespace TarjetaSube
             return viajesGratuitosHoy < MAX_VIAJES_GRATUITOS_DIA;
         }
 
-        public new void RegistrarViaje()
+        public bool PuedeViajarEnEsteHorario()
+        {
+            DateTime ahora = DateTime.Now;
+            
+            // Verifica si es lunes a viernes
+            if (ahora.DayOfWeek == DayOfWeek.Saturday || ahora.DayOfWeek == DayOfWeek.Sunday)
+            {
+                return false;
+            }
+            
+            // Verifica si estÃ¡ entre las 6 y las 22
+            if (ahora.Hour < 6 || ahora.Hour >= 22)
+            {
+                return false;
+            }
+            
+            return true;
+        }
+
+        public void RegistrarViaje()
         {
             DateTime hoy = DateTime.Now.Date;
 
-            // Resetear contador si es un nuevo día
+            // Resetear contador si es un nuevo dÃ­a
             if (ultimaFechaViaje.Date != hoy)
             {
                 viajesGratuitosHoy = 0;
@@ -58,9 +77,11 @@ namespace TarjetaSube
 
             viajesGratuitosHoy++;
             ultimaFechaViaje = DateTime.Now;
+        }
 
-            // También llamar al método base para el contador de uso frecuente
-            base.RegistrarViaje();
+        public void RegistrarViajeGratuito()
+        {
+            RegistrarViaje();
         }
 
         public int ObtenerViajesGratuitosHoy()
